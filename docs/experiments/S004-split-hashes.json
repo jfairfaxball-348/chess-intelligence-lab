@@ -1,0 +1,11 @@
+{
+  "fold-0-inner-val.jsonl": "1a3c0556a2aaa0db951a140457baaf7ff1c0c8744d15a8af743b148ad965bec6",
+  "fold-0-outer.jsonl": "5949c4b201b9e8ccc58d5c41a2fbefc1fbfd36072cb11b1f18d13e49681c8079",
+  "fold-0-train.jsonl": "175fe61efbe2db4bd7e5a0024f3aaec5eb55110a00901980dee5de13a8d82873",
+  "fold-1-inner-val.jsonl": "63d6b33ca2602f1d3337761f25642301c6648743b54ae7955c1bafb7f28d5d1f",
+  "fold-1-outer.jsonl": "7df60388ebb8a4969c53e57757edfe03bdf37aa9cf5ae4a0b6d88035c3108a59",
+  "fold-1-train.jsonl": "030dcf73595bf390f79628fe019039a231526b27c91fd3b237d507d5c9037954",
+  "fold-2-inner-val.jsonl": "3a2f106c7645cab64b3547fae43b098569a1564c36c7cec5e99a823095b77315",
+  "fold-2-outer.jsonl": "c7a576f3e2f6e4b9ea5961c5acd3e0e52a17ddf3b560dd08f1f58f3756383a2d",
+  "fold-2-train.jsonl": "370d17d545570e4adc0e697c556c0edc87df65642248e8311d80dde7a429b08b"
+}
