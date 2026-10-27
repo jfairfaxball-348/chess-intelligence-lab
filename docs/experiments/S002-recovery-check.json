@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "retained_rows": 20,
+  "recomputed_rows": 44,
+  "identical_to_uninterrupted_sha256": "41374103db3a95fbe350b5fa2ade4d706c26497938e53e218fac644b4b077af0"
+}

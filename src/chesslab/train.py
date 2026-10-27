@@ -3,12 +3,13 @@
 import hashlib
 import json
 import random
+import copy
 from pathlib import Path
 
 import torch
 from torch import nn
 
-from .data import read_jsonl
+from .data import read_jsonl, canonical_position
 from .encoding import ENCODING_VERSION, encode_board
 from .material import material_cp
 from .model import MODEL_VERSION, TinyEvaluator
@@ -44,12 +45,18 @@ def train(train_path: str | Path, val_path: str | Path, out_path: str | Path,
     train_rows, val_rows = read_jsonl(train_path), read_jsonl(val_path)
     if not train_rows or not val_rows:
         raise ValueError("Train and validation sets must be nonempty")
-    overlap = {r["fen"] for r in train_rows} & {r["fen"] for r in val_rows}
+    overlap = {canonical_position(r["fen"]) for r in train_rows} & {canonical_position(r["fen"]) for r in val_rows}
     if overlap:
         raise ValueError("Train/validation position overlap")
+    games_train = {r["game_id"] for r in train_rows if "game_id" in r}
+    games_val = {r["game_id"] for r in val_rows if "game_id" in r}
+    if games_train & games_val:
+        raise ValueError("Train/validation source game overlap")
     sources = sorted({r["source"] for r in train_rows + val_rows})
     if len(sources) != 1:
         raise ValueError("Do not mix synthetic and engine-labelled datasets in one run")
+    if Path(out_path).exists():
+        raise FileExistsError(out_path)
     torch.manual_seed(seed)
     random.seed(seed)
     torch.set_num_threads(1)
@@ -60,6 +67,9 @@ def train(train_path: str | Path, val_path: str | Path, out_path: str | Path,
     loss_fn = nn.MSELoss()
     initial = _metrics(model, xval, yval)
     history = []
+    best_mae = float("inf")
+    best_state = None
+    best_epoch = None
     for _ in range(epochs):
         model.train()
         order = torch.randperm(len(xtrain))
@@ -70,18 +80,26 @@ def train(train_path: str | Path, val_path: str | Path, out_path: str | Path,
             optimiser.step()
         model.eval()
         history.append(_metrics(model, xval, yval))
+        if history[-1]["mae_pawns"] < best_mae:
+            best_mae = history[-1]["mae_pawns"]
+            best_state = copy.deepcopy(model.state_dict())
+            best_epoch = len(history)
+    model.load_state_dict(best_state)
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     torch.save({"model_version": MODEL_VERSION, "encoding_version": ENCODING_VERSION,
                 "width": width, "state_dict": model.state_dict()}, out_path)
     sha256 = hashlib.sha256(out_path.read_bytes()).hexdigest()
-    result = {"experiment": "S001-synthetic-distillation-smoke",
-              "status": "synthetic label demonstration; no strength claim",
+    result = {"experiment": "scalar-distillation",
+              "status": "predictive evaluation only; no strength claim",
               "label_source": sources[0], "train_count": len(train_rows),
               "val_count": len(val_rows), "seed": seed, "epochs": epochs,
               "width": width, "parameters": sum(p.numel() for p in model.parameters()),
               "initial_validation": initial, "final_validation": history[-1],
-              "history": history, "checkpoint_sha256": sha256}
+              "history": history, "selected_epoch": best_epoch,
+              "selected_validation": _metrics(model, xval, yval),
+              "learning_rate": lr, "batch_size": 32, "device": "cpu",
+              "checkpoint_sha256": sha256}
     return result
 
 
@@ -103,4 +121,4 @@ def evaluate(checkpoint: str | Path, dataset_path: str | Path) -> dict:
     return {"label_sources": sorted({r["source"] for r in rows}),
             "positions": len(y), "neural": net,
             "material_baseline_mae_pawns": round(baseline_mae, 6),
-            "warning": "Value loss is not playing strength; synthetic labels copy material baseline"}
+            "warning": "Value loss is not playing strength; mate targets excluded"}

@@ -1,0 +1,59 @@
+{
+  "test": {
+    "annotated_positions": 318,
+    "mate_rows": 15,
+    "mate_scores_have_null_target_cp": true,
+    "output": "C:\\chess-intelligence-lab\\data\\teacher\\teacher-v001\\test.jsonl",
+    "path": "C:\\chess-intelligence-lab\\data\\teacher\\teacher-v001\\test-provenance.jsonl",
+    "phase_counts": {
+      "endgame": 58,
+      "middlegame": 175,
+      "opening": 85
+    },
+    "requested_positions": 318,
+    "seconds": 4.39100000000326,
+    "sha256": "f3d7d0ac678172e3ef4812543ce79b4f013e6d784bd692a296bf9dd3b16d7b5d",
+    "teacher_id": {
+      "author": "the Stockfish developers (see AUTHORS file)",
+      "name": "Stockfish 19"
+    }
+  },
+  "train": {
+    "annotated_positions": 2520,
+    "mate_rows": 135,
+    "mate_scores_have_null_target_cp": true,
+    "output": "C:\\chess-intelligence-lab\\data\\teacher\\teacher-v001\\train.jsonl",
+    "path": "C:\\chess-intelligence-lab\\data\\teacher\\teacher-v001\\train-provenance.jsonl",
+    "phase_counts": {
+      "endgame": 258,
+      "middlegame": 1559,
+      "opening": 703
+    },
+    "requested_positions": 2520,
+    "seconds": 30.96899999998277,
+    "sha256": "6f309e849bdb3785fd91220eaf255655f5fd5f3e170943607e4ff02bf3bf9366",
+    "teacher_id": {
+      "author": "the Stockfish developers (see AUTHORS file)",
+      "name": "Stockfish 19"
+    }
+  },
+  "val": {
+    "annotated_positions": 316,
+    "mate_rows": 18,
+    "mate_scores_have_null_target_cp": true,
+    "output": "C:\\chess-intelligence-lab\\data\\teacher\\teacher-v001\\val.jsonl",
+    "path": "C:\\chess-intelligence-lab\\data\\teacher\\teacher-v001\\val-provenance.jsonl",
+    "phase_counts": {
+      "endgame": 29,
+      "middlegame": 188,
+      "opening": 99
+    },
+    "requested_positions": 316,
+    "seconds": 4.436999999976251,
+    "sha256": "30b5d7e2180add5c5f56f42ee7ef3216218577d85701f89950791635df56e399",
+    "teacher_id": {
+      "author": "the Stockfish developers (see AUTHORS file)",
+      "name": "Stockfish 19"
+    }
+  }
+}

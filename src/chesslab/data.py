@@ -13,6 +13,15 @@ SYNTHETIC_SOURCE = "synthetic_material_v1"
 STOCKFISH_SOURCE = "stockfish_uci"
 
 
+def canonical_position(fen: str) -> str:
+    """Clock-free transpositions and orthodox color/rank and safe file symmetries."""
+    board = chess.Board(fen)
+    boards = [board, board.mirror()]
+    if not board.castling_rights:
+        boards += [b.transform(chess.flip_horizontal) for b in list(boards)]
+    return min(" ".join(b.fen(en_passant="legal").split()[:4]) for b in boards)
+
+
 def random_position(rng: random.Random) -> chess.Board:
     board = chess.Board()
     for _ in range(rng.randint(4, 70)):

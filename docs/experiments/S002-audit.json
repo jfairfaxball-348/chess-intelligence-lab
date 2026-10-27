@@ -1,0 +1,38 @@
+{
+  "all_teacher_pvs_legal": true,
+  "counts": {
+    "test": 318,
+    "train": 2520,
+    "val": 316
+  },
+  "cross_split_canonical_overlap": 0,
+  "cross_split_source_game_overlap": 0,
+  "finite_label_distribution": {
+    "test": {
+      "balanced": 139,
+      "finite": 303,
+      "max_cp": 1801,
+      "min_cp": -1618,
+      "negative": 74,
+      "positive": 90
+    },
+    "train": {
+      "balanced": 675,
+      "finite": 2385,
+      "max_cp": 2523,
+      "min_cp": -2201,
+      "negative": 898,
+      "positive": 812
+    },
+    "val": {
+      "balanced": 99,
+      "finite": 298,
+      "max_cp": 1596,
+      "min_cp": -1273,
+      "negative": 99,
+      "positive": 100
+    }
+  },
+  "legal_source_games": 80,
+  "status": "PASS"
+}

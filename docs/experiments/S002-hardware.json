@@ -1,0 +1,31 @@
+{
+  "gpu": [
+    "name, memory.total [MiB], driver_version",
+    "NVIDIA GeForce RTX 3050 Ti Laptop GPU, 4096 MiB, 595.97"
+  ],
+  "ram": 16866881536,
+  "disks": [
+    {
+      "Name": "C",
+      "Root": "C:\\",
+      "Free": 76119560192,
+      "Used": 923582308352
+    },
+    {
+      "Name": "Temp",
+      "Root": "C:\\Users\\johnf\\AppData\\Local\\Temp\\",
+      "Free": 76119560192,
+      "Used": 923582308352
+    }
+  ],
+  "cpu": {
+    "Name": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16
+  },
+  "os": {
+    "Caption": "Microsoft Windows 11 Home",
+    "Version": "10.0.26300"
+  },
+  "location": "C:\\chess-intelligence-lab"
+}

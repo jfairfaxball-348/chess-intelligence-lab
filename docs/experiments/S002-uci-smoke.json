@@ -1,0 +1,47 @@
+{
+  "legal_checks": [
+    {
+      "evaluator": "material",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "move": "a2a3",
+      "seconds": 0.0,
+      "info": "{'depth': 1, 'nodes': 20, 'score': PovScore(Cp(0), WHITE)}"
+    },
+    {
+      "evaluator": "material",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "move": "a2a3",
+      "seconds": 0.01600000000325963,
+      "info": "{'depth': 1, 'nodes': 29, 'score': PovScore(Cp(0), WHITE)}"
+    },
+    {
+      "evaluator": "material",
+      "fen": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2",
+      "move": "d5c4",
+      "seconds": 0.0,
+      "info": "{'depth': 1, 'nodes': 28, 'score': PovScore(Cp(+100), BLACK)}"
+    },
+    {
+      "evaluator": "neural",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "move": "f2f4",
+      "seconds": 0.0,
+      "info": "{'depth': 1, 'nodes': 20, 'score': PovScore(Cp(+85), WHITE)}"
+    },
+    {
+      "evaluator": "neural",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "move": "f2f4",
+      "seconds": 0.014999999955762178,
+      "info": "{'depth': 1, 'nodes': 29, 'score': PovScore(Cp(+84), WHITE)}"
+    },
+    {
+      "evaluator": "neural",
+      "fen": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2",
+      "move": "e8d7",
+      "seconds": 0.01600000000325963,
+      "info": "{'depth': 1, 'nodes': 28, 'score': PovScore(Cp(-28), BLACK)}"
+    }
+  ],
+  "strength_claim": false
+}

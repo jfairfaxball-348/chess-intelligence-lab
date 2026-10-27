@@ -1,0 +1,12 @@
+{
+  "annotated_positions": 64,
+  "mate_scores_have_null_target_cp": true,
+  "output": "C:\\chess-intelligence-lab\\runs\\s002\\benchmark-labels.jsonl",
+  "positions_per_second": 29.906542055879537,
+  "requested_positions": 64,
+  "seconds": 2.14000000001397,
+  "teacher_id": {
+    "author": "the Stockfish developers (see AUTHORS file)",
+    "name": "Stockfish 19"
+  }
+}

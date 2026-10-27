@@ -97,3 +97,11 @@ A single training run rejects mixed synthetic and real teacher sources.
 See [S001 experiment](docs/S001-experiment.md) and
 [S002 handoff](docs/S002-handoff.md). Datasets, checkpoints and experiment
 outputs remain local or CI artifacts; Git tracks only source and manifests.
+
+S002 has now run locally: 3,154 genuine Stockfish-labelled positions and two
+preserved checkpoints. Held-out neural MAE was 2.780 pawns versus 3.744 untrained
+and 1.730 material; playing strength is unmeasured. See the
+[S002 report](docs/experiments/S002-report.md) and
+[S003 local handoff](docs/S003-handoff.md) for artifacts and reuse commands.
+Annotation now resumes incrementally with input/configuration checks. Training
+saves the best validation epoch and refuses existing checkpoint paths.

@@ -10,6 +10,12 @@ models/
 *.pth
 *.pkl
 *.onnx
+*.safetensors
+*.ckpt
+*.exe
+*.dll
+*.zip
+*.log
 *.jsonl
 *.pgn
 # Local tooling
