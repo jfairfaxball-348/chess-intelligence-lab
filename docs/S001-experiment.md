@@ -32,8 +32,17 @@ produces finite metrics; a checkpoint reloads; independent inference returns
 a centipawn evaluation; UCI returns legal best moves; no Stockfish executable
 is needed anywhere in this synthetic experiment.
 
-**Outcome.** Pending CI evidence at initial commit. Do not manufacture a numerical
-result. Finite validation loss is a smoke-test milestone, not a strength claim.
+**Outcome (2026-10-27, PR #1 GitHub Actions run 40509462954).**
+All 14 unit tests passed, a full synthetic train/evaluate smoke ran, and the UCI
+handshake returned a best move. The CI-sized run used 32 train and 12 validation
+positions, seed 7, width 32 (15,841 parameters), and **2 epochs**:
+initial validation MAE 7.212671 pawns; final validation MAE 7.238849 pawns,
+RMSE 10.340063 pawns. The exact material teacher scored 0.0 MAE against
+its own labels. Thus the model **did not improve on this holdout** and is not
+a demonstrated useful evaluator yet. This run verifies the machinery rather
+than statistical learning or playing strength. The 96/24/3 default documented
+above was not executed in this CI run. Check the attached GitHub Actions
+report artifact for the machine-readable output.
 
 **Known methodological limitations.** Random playouts are not representative
 of human/engine games; positions sampled along games remain statistically
