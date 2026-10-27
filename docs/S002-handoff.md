@@ -7,7 +7,7 @@ This is a practical storage/compute decision, not a change to the scientific
 aims. Cloud GitHub Actions may continue to run short CI tests.
 
 **Repository:** https://github.com/jfairfaxball-348/chess-intelligence-lab
-**Authoritative code:** latest committed \`main\` at the start of this session.
+**Authoritative code:** latest committed `main` at the start of this session.
 **S001:** GitHub Actions passed 14 tests and the synthetic training/UCI smoke.
 It did *not* demonstrate useful model learning: the 32/12-position smoke test's
 validation MAE rose from 7.212671 to 7.238849 pawns. S002 is the first
@@ -22,12 +22,12 @@ genuine Stockfish-supervised experiment, not a repeat of S001 setup.
    report that the owner must open this repository in a local Codex/Claude Code
    session and run the S002 handoff there.
 2. Use the owner's existing local clone if present (GitHub Desktop is fine).
-   Fetch/pull latest \`main\` carefully, inspecting for uncommitted local changes;
+   Fetch/pull latest `main` carefully, inspecting for uncommitted local changes;
    don't overwrite local work, reset branches, or discard local data. If no
    clone exists, clone this repository to a durable laptop folder.
-3. Read \`README.md\`, \`pyproject.toml\`, \`src/chesslab/data.py\`,
-   \`src/chesslab/teacher.py\`, \`src/chesslab/train.py\`,
-   \`src/chesslab/uci.py\`, and this handoff before editing anything.
+3. Read `README.md`, `pyproject.toml`, `src/chesslab/data.py`,
+   `src/chesslab/teacher.py`, `src/chesslab/train.py`,
+   `src/chesslab/uci.py`, and this handoff before editing anything.
 4. Record actual hardware. Do not assume a discrete GPU or particular VRAM,
    available disk or RAM. PowerShell example:
 
@@ -37,10 +37,10 @@ genuine Stockfish-supervised experiment, not a repeat of S001 setup.
        Get-PSDrive -PSProvider FileSystem | Select-Object Name,Free,Used
        nvidia-smi
 
-   \`nvidia-smi\` may be unavailable. Also record Python, PyTorch, Windows,
+   `nvidia-smi` may be unavailable. Also record Python, PyTorch, Windows,
    Stockfish and CPU/GPU capabilities before sizing any experiment.
 5. Create a project-local virtual environment on the laptop. PowerShell commands
-   from repository root (use \`py\` if the Python launcher is installed):
+   from repository root (use `py` if the Python launcher is installed):
 
        py -3 -m venv .venv
        .\.venv\Scripts\python.exe -m pip install -e ".[train,dev]"
@@ -65,13 +65,13 @@ requires an explicitly configured external data root. Proposed layout:
     docs/experiments/       # small shareable experiment reports and manifests
 
 The first five paths are Git-ignored; they are **not** backed up by GitHub.
-The final \`docs/experiments/\` location is for small, non-sensitive textual
+The final `docs/experiments/` location is for small, non-sensitive textual
 manifests/reports, not raw training data. Do not assume ignoring files makes
 them persistent if the agent uses a temporary sandbox. Check paths and
 free disk space and write an actual file; verify it survives re-opening.
 
-- Version datasets (e.g. \`teacher-v001\`), never regenerate/relabel into the
-  same files silently. Version model checkpoints (\`model-v001.pt\`, etc.).
+- Version datasets (e.g. `teacher-v001`), never regenerate/relabel into the
+  same files silently. Version model checkpoints (`model-v001.pt`, etc.).
 - Record SHA-256 hashes, sample counts, generation seeds, source/licence,
   source game IDs, split policy, teacher executable hash/version, depth/nodes
   and options, architecture version, hyperparameters, training start/stop,
@@ -98,7 +98,7 @@ free disk space and write an actual file; verify it survives re-opening.
 3. Split by **source game before extracting positions**, preserving a final
    unseen test set. Deduplicate across partitions (including recognised
    symmetric/transposition duplicates); prevent any training/test game leakage.
-4. Inspect and, if needed, improve the existing \`annotate\` and dataset
+4. Inspect and, if needed, improve the existing `annotate` and dataset
    tools to support stable incremental/batched output, failure recovery,
    complete manifests and reproducible annotations. Start with a short
    50–100-position benchmark; then size a first trainable corpus based on
@@ -142,9 +142,9 @@ bureaucratic session protocols; prioritise experimental work and persistence.
 ## Scientific and project boundaries
 
 S001 results establish *technical operability*, not chess-playing strength.
-Formal endgame research (\`engame-chess\`) is proof-first and independent;
+Formal endgame research (`engame-chess`) is proof-first and independent;
 KRK is not globally solved. The Maths Endgame mode in
-\`engame-chess-playground\` must never consume experimental neural moves as
+`engame-chess-playground` must never consume experimental neural moves as
 mathematically proved results. Do not modify either separate repository.
 
 Long-term options include stronger value/policy models, independent search,
