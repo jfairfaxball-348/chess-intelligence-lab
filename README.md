@@ -112,3 +112,9 @@ for S002 and 1.883 for material. Material remains better; strength is unmeasured
 See the [S003 report](docs/experiments/S003-report.md) and
 [S004 handoff](docs/S004-handoff.md). Checkpoints now carry representation and
 residual configuration; the original S002 format remains supported.
+
+S004 checked correction robustness using three game-grouped outer folds and two
+training seeds. The selected shrinkage improved development mean-game MAE by
+only 0.015 pawns and failed the preregistered gate. No new final test or extended
+training followed. See the [S004 report](docs/experiments/S004-report.md) and
+[S005 audit handoff](docs/S005-handoff.md).

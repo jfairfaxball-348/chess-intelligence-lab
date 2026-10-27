@@ -1,0 +1,30 @@
+{
+  "checkpoint_hashes_verified": 6,
+  "development_games": 72,
+  "each_source_game_outer_once": true,
+  "finite_oof_positions": 2683,
+  "fresh_test_required_only_after_gate_pass": true,
+  "gate_independently_recomputed": false,
+  "independent_scores": [
+    {
+      "mean_game_delta_pawns": 0.0,
+      "scale": 0
+    },
+    {
+      "mean_game_delta_pawns": -0.01331558023557607,
+      "scale": 0.25
+    },
+    {
+      "mean_game_delta_pawns": -0.015244431339172835,
+      "scale": 0.5
+    },
+    {
+      "mean_game_delta_pawns": 0.007229546622473988,
+      "scale": 1
+    }
+  ],
+  "inner_selected_metrics_verified": true,
+  "max_reloaded_prediction_difference": 0.0,
+  "no_game_or_canonical_overlap_within_each_fold": true,
+  "status": "PASS"
+}

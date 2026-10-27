@@ -1,0 +1,128 @@
+{
+  "backup": "Owner chose C: only; no independent backup",
+  "completed_resume_unchanged_sha256": {
+    "C:\\chess-intelligence-lab\\runs\\s004\\oof-predictions.jsonl": "17eacf6e3ecf36dfd3bfd67d2154629fc42f1cdff6769a6ca9878b5634b92bfa",
+    "C:\\chess-intelligence-lab\\runs\\s004\\result.json": "cfd41df257fb1c6fd2d5f0153ae1c33e91bed56be55e77cf4ee3a20f0c40ea51",
+    "C:\\chess-intelligence-lab\\runs\\s004\\training.json": "15f020e0e138ac0705f68d77f5e601dd8502b36be342d83fa989ad1b89ccbd91"
+  },
+  "files": [
+    {
+      "bytes": 185578,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s004-cv-v001\\fold-0-inner-val.jsonl",
+      "sha256": "1a3c0556a2aaa0db951a140457baaf7ff1c0c8744d15a8af743b148ad965bec6"
+    },
+    {
+      "bytes": 555334,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s004-cv-v001\\fold-0-outer.jsonl",
+      "sha256": "5949c4b201b9e8ccc58d5c41a2fbefc1fbfd36072cb11b1f18d13e49681c8079"
+    },
+    {
+      "bytes": 910929,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s004-cv-v001\\fold-0-train.jsonl",
+      "sha256": "175fe61efbe2db4bd7e5a0024f3aaec5eb55110a00901980dee5de13a8d82873"
+    },
+    {
+      "bytes": 180736,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s004-cv-v001\\fold-1-inner-val.jsonl",
+      "sha256": "63d6b33ca2602f1d3337761f25642301c6648743b54ae7955c1bafb7f28d5d1f"
+    },
+    {
+      "bytes": 549896,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s004-cv-v001\\fold-1-outer.jsonl",
+      "sha256": "7df60388ebb8a4969c53e57757edfe03bdf37aa9cf5ae4a0b6d88035c3108a59"
+    },
+    {
+      "bytes": 921185,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s004-cv-v001\\fold-1-train.jsonl",
+      "sha256": "030dcf73595bf390f79628fe019039a231526b27c91fd3b237d507d5c9037954"
+    },
+    {
+      "bytes": 184779,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s004-cv-v001\\fold-2-inner-val.jsonl",
+      "sha256": "3a2f106c7645cab64b3547fae43b098569a1564c36c7cec5e99a823095b77315"
+    },
+    {
+      "bytes": 545347,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s004-cv-v001\\fold-2-outer.jsonl",
+      "sha256": "c7a576f3e2f6e4b9ea5961c5acd3e0e52a17ddf3b560dd08f1f58f3756383a2d"
+    },
+    {
+      "bytes": 921711,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s004-cv-v001\\fold-2-train.jsonl",
+      "sha256": "370d17d545570e4adc0e697c556c0edc87df65642248e8311d80dde7a429b08b"
+    },
+    {
+      "bytes": 67311,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-0-seed-19.pt",
+      "sha256": "beb01ecf65edf31147817ac33f16646c4fde1d32c53c004b0272e006d7a13c3c"
+    },
+    {
+      "bytes": 67297,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-0-seed-7.pt",
+      "sha256": "f527d6c4509240cfd133c221e8b26db3a907885540bbbcc741e30092705e1d20"
+    },
+    {
+      "bytes": 67311,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-1-seed-19.pt",
+      "sha256": "12dbc52b6050a78b60abd45565558a6cb0b6f57ca285bf8cd0cbe37a197f2040"
+    },
+    {
+      "bytes": 67297,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-1-seed-7.pt",
+      "sha256": "9bee3ee64f43aca64787fc99e9d73a6eaa9fff37376f5344345320c8bb44ae7c"
+    },
+    {
+      "bytes": 67311,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-2-seed-19.pt",
+      "sha256": "df04a10144082265f3686e0c0be7d48a24da13291ac6256056e0020f5d836f94"
+    },
+    {
+      "bytes": 67297,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-2-seed-7.pt",
+      "sha256": "52512d5e18e62b90b54d652ae76f1196aa7f314bee3c14d92e4057cd95742973"
+    },
+    {
+      "bytes": 776,
+      "path": "C:\\chess-intelligence-lab\\runs\\s004\\audit.json",
+      "sha256": "2c898121cc132263c76e8f45b8ee1c8e5a4eda8b16c5eac22b957e0cb4891476"
+    },
+    {
+      "bytes": 1855681,
+      "path": "C:\\chess-intelligence-lab\\runs\\s004\\oof-predictions.jsonl",
+      "sha256": "17eacf6e3ecf36dfd3bfd67d2154629fc42f1cdff6769a6ca9878b5634b92bfa"
+    },
+    {
+      "bytes": 8571,
+      "path": "C:\\chess-intelligence-lab\\runs\\s004\\plan.json",
+      "sha256": "4fc52bbfab1ca4f845256f42382a92f1ecda5bc94bb17c2f555c325aada113d1"
+    },
+    {
+      "bytes": 3170,
+      "path": "C:\\chess-intelligence-lab\\runs\\s004\\result.json",
+      "sha256": "cfd41df257fb1c6fd2d5f0153ae1c33e91bed56be55e77cf4ee3a20f0c40ea51"
+    },
+    {
+      "bytes": 854,
+      "path": "C:\\chess-intelligence-lab\\runs\\s004\\split-hashes.json",
+      "sha256": "5281228dffa051129c7d98d1cb1844b9f1047a8c7444874410e6ea93c33916f1"
+    },
+    {
+      "bytes": 3236,
+      "path": "C:\\chess-intelligence-lab\\runs\\s004\\summary.log",
+      "sha256": "3fc8906d7d6a1d04411d612050a916916f03f299b33044499d67c5ffb79af314"
+    },
+    {
+      "bytes": 18989,
+      "path": "C:\\chess-intelligence-lab\\runs\\s004\\training.json",
+      "sha256": "15f020e0e138ac0705f68d77f5e601dd8502b36be342d83fa989ad1b89ccbd91"
+    },
+    {
+      "bytes": 323,
+      "path": "C:\\chess-intelligence-lab\\runs\\s004\\training.log",
+      "sha256": "f6695c0dad71fe13eb5d5551f653592eb3073dfe902277ca5f1f0d01bb5f2147"
+    }
+  ],
+  "final_test": "UNEXECUTED: preregistered gate failed; no new games or labels generated",
+  "prior_s002_s003_artifacts_unchanged": true,
+  "root": "C:\\chess-intelligence-lab"
+}

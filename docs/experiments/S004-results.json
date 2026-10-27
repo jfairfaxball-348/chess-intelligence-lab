@@ -1,0 +1,101 @@
+{
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 404,
+  "candidates": [
+    {
+      "fold_deltas": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "game_bootstrap_95_interval_pawns": [
+        0.0,
+        0.0
+      ],
+      "mean_game_delta_pawns": 0.0,
+      "mean_game_material_mae_pawns": 2.1160654424645333,
+      "mean_game_neural_mae_pawns": 2.1160654424645333,
+      "passes_gate": false,
+      "pooled_material_mae_pawns": 2.1163138278046962,
+      "pooled_neural_mae_pawns": 2.1163138278046962,
+      "scale": 0,
+      "seed_deltas": {
+        "19": 0.0,
+        "7": 0.0
+      }
+    },
+    {
+      "fold_deltas": {
+        "0": -0.006609159339303692,
+        "1": -0.024035718034687223,
+        "2": -0.009301863332737295
+      },
+      "game_bootstrap_95_interval_pawns": [
+        -0.021850786979896102,
+        -0.005281581095429151
+      ],
+      "mean_game_delta_pawns": -0.01331558023557607,
+      "mean_game_material_mae_pawns": 2.1160654424645333,
+      "mean_game_neural_mae_pawns": 2.102749862228957,
+      "passes_gate": false,
+      "pooled_material_mae_pawns": 2.1163138278046962,
+      "pooled_neural_mae_pawns": 2.1028704559102853,
+      "scale": 0.25,
+      "seed_deltas": {
+        "19": -0.01157944596238688,
+        "7": -0.013532165105347972
+      }
+    },
+    {
+      "fold_deltas": {
+        "0": 0.0037713156788788467,
+        "1": -0.032903526227220696,
+        "2": -0.016601083469176655
+      },
+      "game_bootstrap_95_interval_pawns": [
+        -0.03203320637152786,
+        0.0011817061350258879
+      ],
+      "mean_game_delta_pawns": -0.015244431339172835,
+      "mean_game_material_mae_pawns": 2.1160654424645333,
+      "mean_game_neural_mae_pawns": 2.10082101112536,
+      "passes_gate": false,
+      "pooled_material_mae_pawns": 2.1163138278046962,
+      "pooled_neural_mae_pawns": 2.1007331202500312,
+      "scale": 0.5,
+      "seed_deltas": {
+        "19": -0.015652458541512673,
+        "7": -0.00995605965306219
+      }
+    },
+    {
+      "fold_deltas": {
+        "0": 0.0626307753352098,
+        "1": -0.01594539114059638,
+        "2": -0.02499674432719146
+      },
+      "game_bootstrap_95_interval_pawns": [
+        -0.026535679314276153,
+        0.041864262993819616
+      ],
+      "mean_game_delta_pawns": 0.007229546622473988,
+      "mean_game_material_mae_pawns": 2.1160654424645333,
+      "mean_game_neural_mae_pawns": 2.123294989087007,
+      "passes_gate": false,
+      "pooled_material_mae_pawns": 2.1163138278046962,
+      "pooled_neural_mae_pawns": 2.12264335534855,
+      "scale": 1,
+      "seed_deltas": {
+        "19": -0.0011811504728143235,
+        "7": 0.03214265176032223
+      }
+    }
+  ],
+  "claim_limit": "Reused development data; scale selection is optimistic; fresh final test required after gate pass",
+  "final_test_status": "NOT GENERATED: preregistered development gate failed",
+  "gate_passed": false,
+  "oof_predictions_sha256": "17eacf6e3ecf36dfd3bfd67d2154629fc42f1cdff6769a6ca9878b5634b92bfa",
+  "positions": 2683,
+  "selected_scale": 0.5,
+  "source_games": 72
+}

@@ -1,0 +1,723 @@
+{
+  "executed_git_sha": "82a653ad0e0f68829934ec4c42e7faa31d812379",
+  "finished_utc": "2026-10-27T13:50:27.338904+00:00",
+  "runner_sha256": "ab4261ccdccf6ac1c2349e6e9581e85229eabca221ea16ef0584f285b54693cd",
+  "source_hashes": {
+    "src\\chesslab\\__init__.py": "db942b871d8c559e3de9889628aa074c44be3002a17438693f7c670aff31431b",
+    "src\\chesslab\\cli.py": "74cbaaebc77c6701fa7908994631e9beb4e7bb21b4734894ca06e493f417c668",
+    "src\\chesslab\\data.py": "80b102d9ba3a0ae1a342f0a3dfff1174c17ab07e92828056ea1c2b19f2d2f120",
+    "src\\chesslab\\encoding.py": "8fc9fcc5fdc7c05248599c09934e48a3ab8de5110ce3b14219a86a3951d0cdea",
+    "src\\chesslab\\material.py": "c4a92523d6af4d984586b85cd4f3a8a46f564f7fceea4785f8ad499d8c9b6eca",
+    "src\\chesslab\\model.py": "17484e2bdce8dc383f68611dbe4da920c33d92014a2291629181a9076f756c2f",
+    "src\\chesslab\\search.py": "2a2e9df1574db19e1b6f07b2eb4fef7796dcf9a4300f5c7087ca3ee1c12542c1",
+    "src\\chesslab\\teacher.py": "915c0912194885288681609b5e217a32490654d665e52211096570566c5340a1",
+    "src\\chesslab\\train.py": "ffa619e95ecad1350b27b6f6ad2de79dafc765b7afd4377fc92684f5208bb5d3",
+    "src\\chesslab\\uci.py": "67761e07247fa120426f1293aed3a26add836e9211baef9f2ce77544fc3805f4",
+    "src\\chesslab\\validation.py": "02b6b00cb009d2a97b2cb31152804637273340e8c5659f74d00bf14acc5d6937"
+  },
+  "started_utc": "2026-10-27T13:50:04.569117+00:00",
+  "trials": [
+    {
+      "batch_size": 32,
+      "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-0-seed-7.pt",
+      "checkpoint_sha256": "f527d6c4509240cfd133c221e8b26db3a907885540bbbcc741e30092705e1d20",
+      "device": "cpu",
+      "epochs": 20,
+      "experiment": "scalar-distillation",
+      "final_validation": {
+        "mae_pawns": 2.364252,
+        "rmse_pawns": 3.034842
+      },
+      "fold": 0,
+      "history": [
+        {
+          "mae_pawns": 2.385969,
+          "rmse_pawns": 3.118358
+        },
+        {
+          "mae_pawns": 2.384459,
+          "rmse_pawns": 3.114645
+        },
+        {
+          "mae_pawns": 2.388775,
+          "rmse_pawns": 3.116613
+        },
+        {
+          "mae_pawns": 2.39779,
+          "rmse_pawns": 3.115955
+        },
+        {
+          "mae_pawns": 2.392376,
+          "rmse_pawns": 3.110425
+        },
+        {
+          "mae_pawns": 2.38085,
+          "rmse_pawns": 3.092071
+        },
+        {
+          "mae_pawns": 2.415847,
+          "rmse_pawns": 3.118307
+        },
+        {
+          "mae_pawns": 2.385044,
+          "rmse_pawns": 3.084671
+        },
+        {
+          "mae_pawns": 2.376447,
+          "rmse_pawns": 3.070685
+        },
+        {
+          "mae_pawns": 2.359012,
+          "rmse_pawns": 3.045836
+        },
+        {
+          "mae_pawns": 2.347293,
+          "rmse_pawns": 3.035549
+        },
+        {
+          "mae_pawns": 2.333078,
+          "rmse_pawns": 3.012666
+        },
+        {
+          "mae_pawns": 2.328024,
+          "rmse_pawns": 2.997089
+        },
+        {
+          "mae_pawns": 2.393167,
+          "rmse_pawns": 3.057736
+        },
+        {
+          "mae_pawns": 2.395224,
+          "rmse_pawns": 3.077442
+        },
+        {
+          "mae_pawns": 2.34226,
+          "rmse_pawns": 3.01647
+        },
+        {
+          "mae_pawns": 2.388173,
+          "rmse_pawns": 3.067559
+        },
+        {
+          "mae_pawns": 2.381441,
+          "rmse_pawns": 3.071485
+        },
+        {
+          "mae_pawns": 2.514229,
+          "rmse_pawns": 3.247151
+        },
+        {
+          "mae_pawns": 2.364252,
+          "rmse_pawns": 3.034842
+        }
+      ],
+      "include_initial_in_selection": true,
+      "initial_validation": {
+        "mae_pawns": 2.4141,
+        "rmse_pawns": 3.143086
+      },
+      "label_source": "stockfish_uci",
+      "learning_rate": 0.002,
+      "loss": "mse",
+      "normalized": true,
+      "parameters": 15841,
+      "residual": true,
+      "seconds": 4.670999999972992,
+      "seed": 7,
+      "selected_epoch": 13,
+      "selected_validation": {
+        "mae_pawns": 2.328024,
+        "rmse_pawns": 2.997089
+      },
+      "status": "predictive evaluation only; no strength claim",
+      "train_count": 1566,
+      "val_count": 316,
+      "width": 32
+    },
+    {
+      "batch_size": 32,
+      "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-0-seed-19.pt",
+      "checkpoint_sha256": "beb01ecf65edf31147817ac33f16646c4fde1d32c53c004b0272e006d7a13c3c",
+      "device": "cpu",
+      "epochs": 20,
+      "experiment": "scalar-distillation",
+      "final_validation": {
+        "mae_pawns": 2.506482,
+        "rmse_pawns": 3.19919
+      },
+      "fold": 0,
+      "history": [
+        {
+          "mae_pawns": 2.367231,
+          "rmse_pawns": 3.103653
+        },
+        {
+          "mae_pawns": 2.410768,
+          "rmse_pawns": 3.134672
+        },
+        {
+          "mae_pawns": 2.40445,
+          "rmse_pawns": 3.129922
+        },
+        {
+          "mae_pawns": 2.381325,
+          "rmse_pawns": 3.110801
+        },
+        {
+          "mae_pawns": 2.374879,
+          "rmse_pawns": 3.098846
+        },
+        {
+          "mae_pawns": 2.392576,
+          "rmse_pawns": 3.100942
+        },
+        {
+          "mae_pawns": 2.401428,
+          "rmse_pawns": 3.107486
+        },
+        {
+          "mae_pawns": 2.381565,
+          "rmse_pawns": 3.082759
+        },
+        {
+          "mae_pawns": 2.328236,
+          "rmse_pawns": 3.040734
+        },
+        {
+          "mae_pawns": 2.36754,
+          "rmse_pawns": 3.059236
+        },
+        {
+          "mae_pawns": 2.376092,
+          "rmse_pawns": 3.068244
+        },
+        {
+          "mae_pawns": 2.469088,
+          "rmse_pawns": 3.131753
+        },
+        {
+          "mae_pawns": 2.489957,
+          "rmse_pawns": 3.177433
+        },
+        {
+          "mae_pawns": 2.523298,
+          "rmse_pawns": 3.201064
+        },
+        {
+          "mae_pawns": 2.611365,
+          "rmse_pawns": 3.384934
+        },
+        {
+          "mae_pawns": 2.464488,
+          "rmse_pawns": 3.115806
+        },
+        {
+          "mae_pawns": 2.420996,
+          "rmse_pawns": 3.101515
+        },
+        {
+          "mae_pawns": 2.503369,
+          "rmse_pawns": 3.17449
+        },
+        {
+          "mae_pawns": 2.478989,
+          "rmse_pawns": 3.197079
+        },
+        {
+          "mae_pawns": 2.506482,
+          "rmse_pawns": 3.19919
+        }
+      ],
+      "include_initial_in_selection": true,
+      "initial_validation": {
+        "mae_pawns": 2.4141,
+        "rmse_pawns": 3.143086
+      },
+      "label_source": "stockfish_uci",
+      "learning_rate": 0.002,
+      "loss": "mse",
+      "normalized": true,
+      "parameters": 15841,
+      "residual": true,
+      "seconds": 3.547000000020489,
+      "seed": 19,
+      "selected_epoch": 9,
+      "selected_validation": {
+        "mae_pawns": 2.328236,
+        "rmse_pawns": 3.040734
+      },
+      "status": "predictive evaluation only; no strength claim",
+      "train_count": 1566,
+      "val_count": 316,
+      "width": 32
+    },
+    {
+      "batch_size": 32,
+      "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-1-seed-7.pt",
+      "checkpoint_sha256": "9bee3ee64f43aca64787fc99e9d73a6eaa9fff37376f5344345320c8bb44ae7c",
+      "device": "cpu",
+      "epochs": 20,
+      "experiment": "scalar-distillation",
+      "final_validation": {
+        "mae_pawns": 1.985303,
+        "rmse_pawns": 2.685873
+      },
+      "fold": 1,
+      "history": [
+        {
+          "mae_pawns": 1.965402,
+          "rmse_pawns": 2.713654
+        },
+        {
+          "mae_pawns": 2.011086,
+          "rmse_pawns": 2.728687
+        },
+        {
+          "mae_pawns": 1.97876,
+          "rmse_pawns": 2.706757
+        },
+        {
+          "mae_pawns": 1.963008,
+          "rmse_pawns": 2.704173
+        },
+        {
+          "mae_pawns": 1.967512,
+          "rmse_pawns": 2.699065
+        },
+        {
+          "mae_pawns": 1.979242,
+          "rmse_pawns": 2.701488
+        },
+        {
+          "mae_pawns": 1.956241,
+          "rmse_pawns": 2.696494
+        },
+        {
+          "mae_pawns": 2.075564,
+          "rmse_pawns": 2.779186
+        },
+        {
+          "mae_pawns": 1.963467,
+          "rmse_pawns": 2.696157
+        },
+        {
+          "mae_pawns": 1.981822,
+          "rmse_pawns": 2.720843
+        },
+        {
+          "mae_pawns": 1.98004,
+          "rmse_pawns": 2.73929
+        },
+        {
+          "mae_pawns": 1.960851,
+          "rmse_pawns": 2.694508
+        },
+        {
+          "mae_pawns": 1.925676,
+          "rmse_pawns": 2.64119
+        },
+        {
+          "mae_pawns": 1.980178,
+          "rmse_pawns": 2.716041
+        },
+        {
+          "mae_pawns": 1.989233,
+          "rmse_pawns": 2.732424
+        },
+        {
+          "mae_pawns": 1.921636,
+          "rmse_pawns": 2.607362
+        },
+        {
+          "mae_pawns": 2.062574,
+          "rmse_pawns": 2.824506
+        },
+        {
+          "mae_pawns": 2.048982,
+          "rmse_pawns": 2.776198
+        },
+        {
+          "mae_pawns": 2.000213,
+          "rmse_pawns": 2.659815
+        },
+        {
+          "mae_pawns": 1.985303,
+          "rmse_pawns": 2.685873
+        }
+      ],
+      "include_initial_in_selection": true,
+      "initial_validation": {
+        "mae_pawns": 1.96732,
+        "rmse_pawns": 2.74427
+      },
+      "label_source": "stockfish_uci",
+      "learning_rate": 0.002,
+      "loss": "mse",
+      "normalized": true,
+      "parameters": 15841,
+      "residual": true,
+      "seconds": 3.6570000000065193,
+      "seed": 7,
+      "selected_epoch": 16,
+      "selected_validation": {
+        "mae_pawns": 1.921636,
+        "rmse_pawns": 2.607362
+      },
+      "status": "predictive evaluation only; no strength claim",
+      "train_count": 1583,
+      "val_count": 310,
+      "width": 32
+    },
+    {
+      "batch_size": 32,
+      "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-1-seed-19.pt",
+      "checkpoint_sha256": "12dbc52b6050a78b60abd45565558a6cb0b6f57ca285bf8cd0cbe37a197f2040",
+      "device": "cpu",
+      "epochs": 20,
+      "experiment": "scalar-distillation",
+      "final_validation": {
+        "mae_pawns": 2.116256,
+        "rmse_pawns": 2.862392
+      },
+      "fold": 1,
+      "history": [
+        {
+          "mae_pawns": 1.972188,
+          "rmse_pawns": 2.704679
+        },
+        {
+          "mae_pawns": 1.960926,
+          "rmse_pawns": 2.70474
+        },
+        {
+          "mae_pawns": 1.958462,
+          "rmse_pawns": 2.705045
+        },
+        {
+          "mae_pawns": 1.964907,
+          "rmse_pawns": 2.6992
+        },
+        {
+          "mae_pawns": 1.970555,
+          "rmse_pawns": 2.69757
+        },
+        {
+          "mae_pawns": 2.050713,
+          "rmse_pawns": 2.747985
+        },
+        {
+          "mae_pawns": 1.976257,
+          "rmse_pawns": 2.698025
+        },
+        {
+          "mae_pawns": 1.969218,
+          "rmse_pawns": 2.691032
+        },
+        {
+          "mae_pawns": 1.95662,
+          "rmse_pawns": 2.693825
+        },
+        {
+          "mae_pawns": 1.96151,
+          "rmse_pawns": 2.70346
+        },
+        {
+          "mae_pawns": 1.990437,
+          "rmse_pawns": 2.733944
+        },
+        {
+          "mae_pawns": 2.022249,
+          "rmse_pawns": 2.793752
+        },
+        {
+          "mae_pawns": 2.002318,
+          "rmse_pawns": 2.735405
+        },
+        {
+          "mae_pawns": 1.956278,
+          "rmse_pawns": 2.714559
+        },
+        {
+          "mae_pawns": 1.95578,
+          "rmse_pawns": 2.687427
+        },
+        {
+          "mae_pawns": 2.157034,
+          "rmse_pawns": 2.936893
+        },
+        {
+          "mae_pawns": 2.039935,
+          "rmse_pawns": 2.782402
+        },
+        {
+          "mae_pawns": 2.011121,
+          "rmse_pawns": 2.736492
+        },
+        {
+          "mae_pawns": 2.05472,
+          "rmse_pawns": 2.7833
+        },
+        {
+          "mae_pawns": 2.116256,
+          "rmse_pawns": 2.862392
+        }
+      ],
+      "include_initial_in_selection": true,
+      "initial_validation": {
+        "mae_pawns": 1.96732,
+        "rmse_pawns": 2.74427
+      },
+      "label_source": "stockfish_uci",
+      "learning_rate": 0.002,
+      "loss": "mse",
+      "normalized": true,
+      "parameters": 15841,
+      "residual": true,
+      "seconds": 3.6709999999729916,
+      "seed": 19,
+      "selected_epoch": 15,
+      "selected_validation": {
+        "mae_pawns": 1.95578,
+        "rmse_pawns": 2.687427
+      },
+      "status": "predictive evaluation only; no strength claim",
+      "train_count": 1583,
+      "val_count": 310,
+      "width": 32
+    },
+    {
+      "batch_size": 32,
+      "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-2-seed-7.pt",
+      "checkpoint_sha256": "52512d5e18e62b90b54d652ae76f1196aa7f314bee3c14d92e4057cd95742973",
+      "device": "cpu",
+      "epochs": 20,
+      "experiment": "scalar-distillation",
+      "final_validation": {
+        "mae_pawns": 2.211763,
+        "rmse_pawns": 3.052739
+      },
+      "fold": 2,
+      "history": [
+        {
+          "mae_pawns": 1.949441,
+          "rmse_pawns": 2.88925
+        },
+        {
+          "mae_pawns": 1.965773,
+          "rmse_pawns": 2.887433
+        },
+        {
+          "mae_pawns": 1.969817,
+          "rmse_pawns": 2.889336
+        },
+        {
+          "mae_pawns": 1.943671,
+          "rmse_pawns": 2.899276
+        },
+        {
+          "mae_pawns": 1.938696,
+          "rmse_pawns": 2.906282
+        },
+        {
+          "mae_pawns": 1.951784,
+          "rmse_pawns": 2.891582
+        },
+        {
+          "mae_pawns": 1.948915,
+          "rmse_pawns": 2.886989
+        },
+        {
+          "mae_pawns": 2.004457,
+          "rmse_pawns": 2.886922
+        },
+        {
+          "mae_pawns": 1.98638,
+          "rmse_pawns": 2.906115
+        },
+        {
+          "mae_pawns": 2.130916,
+          "rmse_pawns": 2.943041
+        },
+        {
+          "mae_pawns": 2.006954,
+          "rmse_pawns": 2.883931
+        },
+        {
+          "mae_pawns": 2.040559,
+          "rmse_pawns": 2.89845
+        },
+        {
+          "mae_pawns": 2.13474,
+          "rmse_pawns": 2.95062
+        },
+        {
+          "mae_pawns": 2.09564,
+          "rmse_pawns": 2.91692
+        },
+        {
+          "mae_pawns": 2.079066,
+          "rmse_pawns": 2.917519
+        },
+        {
+          "mae_pawns": 2.040973,
+          "rmse_pawns": 2.872008
+        },
+        {
+          "mae_pawns": 2.184481,
+          "rmse_pawns": 2.972117
+        },
+        {
+          "mae_pawns": 2.09287,
+          "rmse_pawns": 2.92215
+        },
+        {
+          "mae_pawns": 2.234453,
+          "rmse_pawns": 3.005562
+        },
+        {
+          "mae_pawns": 2.211763,
+          "rmse_pawns": 3.052739
+        }
+      ],
+      "include_initial_in_selection": true,
+      "initial_validation": {
+        "mae_pawns": 1.959324,
+        "rmse_pawns": 2.949049
+      },
+      "label_source": "stockfish_uci",
+      "learning_rate": 0.002,
+      "loss": "mse",
+      "normalized": true,
+      "parameters": 15841,
+      "residual": true,
+      "seconds": 3.485000000044238,
+      "seed": 7,
+      "selected_epoch": 5,
+      "selected_validation": {
+        "mae_pawns": 1.938696,
+        "rmse_pawns": 2.906282
+      },
+      "status": "predictive evaluation only; no strength claim",
+      "train_count": 1582,
+      "val_count": 315,
+      "width": 32
+    },
+    {
+      "batch_size": 32,
+      "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s004\\fold-2-seed-19.pt",
+      "checkpoint_sha256": "df04a10144082265f3686e0c0be7d48a24da13291ac6256056e0020f5d836f94",
+      "device": "cpu",
+      "epochs": 20,
+      "experiment": "scalar-distillation",
+      "final_validation": {
+        "mae_pawns": 2.183932,
+        "rmse_pawns": 2.972379
+      },
+      "fold": 2,
+      "history": [
+        {
+          "mae_pawns": 1.97252,
+          "rmse_pawns": 2.88641
+        },
+        {
+          "mae_pawns": 1.99282,
+          "rmse_pawns": 2.894752
+        },
+        {
+          "mae_pawns": 1.959963,
+          "rmse_pawns": 2.89496
+        },
+        {
+          "mae_pawns": 1.945058,
+          "rmse_pawns": 2.897213
+        },
+        {
+          "mae_pawns": 1.958014,
+          "rmse_pawns": 2.889403
+        },
+        {
+          "mae_pawns": 1.972376,
+          "rmse_pawns": 2.883485
+        },
+        {
+          "mae_pawns": 1.960407,
+          "rmse_pawns": 2.891019
+        },
+        {
+          "mae_pawns": 2.02769,
+          "rmse_pawns": 2.884211
+        },
+        {
+          "mae_pawns": 2.060997,
+          "rmse_pawns": 2.932291
+        },
+        {
+          "mae_pawns": 2.138015,
+          "rmse_pawns": 2.993186
+        },
+        {
+          "mae_pawns": 2.295104,
+          "rmse_pawns": 3.125561
+        },
+        {
+          "mae_pawns": 2.165882,
+          "rmse_pawns": 2.9735
+        },
+        {
+          "mae_pawns": 2.106334,
+          "rmse_pawns": 2.940839
+        },
+        {
+          "mae_pawns": 2.142182,
+          "rmse_pawns": 2.937728
+        },
+        {
+          "mae_pawns": 2.347166,
+          "rmse_pawns": 3.245364
+        },
+        {
+          "mae_pawns": 2.127041,
+          "rmse_pawns": 2.984998
+        },
+        {
+          "mae_pawns": 2.319219,
+          "rmse_pawns": 3.225593
+        },
+        {
+          "mae_pawns": 2.112357,
+          "rmse_pawns": 2.964017
+        },
+        {
+          "mae_pawns": 2.193617,
+          "rmse_pawns": 3.051631
+        },
+        {
+          "mae_pawns": 2.183932,
+          "rmse_pawns": 2.972379
+        }
+      ],
+      "include_initial_in_selection": true,
+      "initial_validation": {
+        "mae_pawns": 1.959324,
+        "rmse_pawns": 2.949049
+      },
+      "label_source": "stockfish_uci",
+      "learning_rate": 0.002,
+      "loss": "mse",
+      "normalized": true,
+      "parameters": 15841,
+      "residual": true,
+      "seconds": 3.7189999999827705,
+      "seed": 19,
+      "selected_epoch": 4,
+      "selected_validation": {
+        "mae_pawns": 1.945058,
+        "rmse_pawns": 2.897213
+      },
+      "status": "predictive evaluation only; no strength claim",
+      "train_count": 1582,
+      "val_count": 315,
+      "width": 32
+    }
+  ]
+}
