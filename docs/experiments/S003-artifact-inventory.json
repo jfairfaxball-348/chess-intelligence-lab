@@ -1,0 +1,238 @@
+{
+  "backup": "Owner chose C: only; no independent backup",
+  "files": [
+    {
+      "bytes": 887,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0000.pgn",
+      "sha256": "9a1e57c0f57bda08a04292bee8ebd833fa3654fee3aaaaf40c8003e8660cf965"
+    },
+    {
+      "bytes": 1546,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0001.pgn",
+      "sha256": "e3463beb8291e49bb0765696894410bb5606009f3e81a4c1351c07efc724de7f"
+    },
+    {
+      "bytes": 707,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0002.pgn",
+      "sha256": "a93985c49153c66e209e7bd2f7e68a7b6072bd9143a8ea9581ff1f5669aad201"
+    },
+    {
+      "bytes": 1077,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0003.pgn",
+      "sha256": "3a8251e82efe0c7eb54e0220b6e0469ef9e84c80bfb261f353fa44cc6c34b79b"
+    },
+    {
+      "bytes": 984,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0004.pgn",
+      "sha256": "3a07e41a114f14c065e7539f0229b06e17f1d11af08d66f4d69e2b0a40e18364"
+    },
+    {
+      "bytes": 472,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0005.pgn",
+      "sha256": "f7d504b86db19e75989457fd40d713cec8f3e89f03b2e804be07620f9f5c63e0"
+    },
+    {
+      "bytes": 1070,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0006.pgn",
+      "sha256": "d8521afd0c77e7eae5291cabe5ad5f3c7a02215a52ba1ffc703b9f631516ec83"
+    },
+    {
+      "bytes": 767,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0007.pgn",
+      "sha256": "d6b364c142e54ae80aeaeb493021fc0fe2664cbb447e0649e89e85b053f95dc4"
+    },
+    {
+      "bytes": 943,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0008.pgn",
+      "sha256": "38ef12e684bf555e930d7d72c0dfff42d694ff44511690f1bb66668ad6100757"
+    },
+    {
+      "bytes": 752,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0009.pgn",
+      "sha256": "67ad5380d736fd085ab490382818865f7917a6ec3edd5428712e896b4ebad73e"
+    },
+    {
+      "bytes": 1742,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0010.pgn",
+      "sha256": "cf95caa157a75adbc5c8aed8d159f2735b933b53ea611f087380039756ff6d2b"
+    },
+    {
+      "bytes": 753,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0011.pgn",
+      "sha256": "f3549d98f2e00c90262450b5d8d856e38254358484cb1d86a034916a96d40e02"
+    },
+    {
+      "bytes": 1005,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0012.pgn",
+      "sha256": "5092d66b6c2ae8882ebed59da1c3a72de451f2bd149c44d34c51220410579555"
+    },
+    {
+      "bytes": 916,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0013.pgn",
+      "sha256": "ee89311cad5d6c9a715fd1893677c021401c037e625627ec2e540482260c8f36"
+    },
+    {
+      "bytes": 1217,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0014.pgn",
+      "sha256": "93ada24bf860b410e5b60628e5b67f021b033b1508ed16dd0678a7dc8e263786"
+    },
+    {
+      "bytes": 1471,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0015.pgn",
+      "sha256": "c6fcea3166bb28c9eddb792b34b2956168234d1e19aa93fccf5565b0fda361fd"
+    },
+    {
+      "bytes": 1028,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0016.pgn",
+      "sha256": "6f2ac630b499138a4bf647e792ee208724446b815a921507494a499a9dd4fdd7"
+    },
+    {
+      "bytes": 1280,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0017.pgn",
+      "sha256": "1c212025f721704532f874ed90a3f9cac9cd16f824e097171d811f295aab551b"
+    },
+    {
+      "bytes": 1152,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0018.pgn",
+      "sha256": "b885171eabcd5134c2fa5bb0c3a4b99d3b4a7bb6817bb60a0f7f0d4186c450dd"
+    },
+    {
+      "bytes": 966,
+      "path": "C:\\chess-intelligence-lab\\data\\raw\\s003-holdout-v001\\game-0019.pgn",
+      "sha256": "50a7de7ae0acf7258405433d86c5b6bcbbab51a9c407a27552a8518f80cd94f9"
+    },
+    {
+      "bytes": 2080,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s003-holdout-v001\\manifest.json",
+      "sha256": "d01d7a1b369f45d2131f1c1ed3baa1ec7bcc1a13a6341e1483c57eba733836d2"
+    },
+    {
+      "bytes": 100197,
+      "path": "C:\\chess-intelligence-lab\\data\\splits\\s003-holdout-v001\\test.jsonl",
+      "sha256": "6f52f30c99db0ef009eb5708ed5df871647b167603518127e4da1284135f999f"
+    },
+    {
+      "bytes": 422930,
+      "path": "C:\\chess-intelligence-lab\\data\\teacher\\s003-holdout-v001\\test-provenance.jsonl",
+      "sha256": "a6cf90b7d00c939d2aface1ae9004539c58bcfb0954034158b4f43d0502badc5"
+    },
+    {
+      "bytes": 372277,
+      "path": "C:\\chess-intelligence-lab\\data\\teacher\\s003-holdout-v001\\test.jsonl",
+      "sha256": "35eae4889f5c2c51df96973d9c0a932801cef57127f0ef509b268ee5e3a34f5b"
+    },
+    {
+      "bytes": 266,
+      "path": "C:\\chess-intelligence-lab\\data\\teacher\\s003-holdout-v001\\test.jsonl.manifest.json",
+      "sha256": "193f5e7184e86a346d6d30dc2d83b4731e66fe12aecf4feed8d9c07cd26eed61"
+    },
+    {
+      "bytes": 67255,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v001-unrecorded.pt",
+      "sha256": "fc440ecacdab2c34707278f799ae2506d7ac54f357dadb9d6faf1207bb632d96"
+    },
+    {
+      "bytes": 67255,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v001.pt",
+      "sha256": "fc440ecacdab2c34707278f799ae2506d7ac54f357dadb9d6faf1207bb632d96"
+    },
+    {
+      "bytes": 67255,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v002.pt",
+      "sha256": "d846f76fbf9727e951f9deb303c120b9d88d12e203054ba1fafa2c0c0e8c3fc7"
+    },
+    {
+      "bytes": 67255,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v003.pt",
+      "sha256": "9de4b394c4375457c56126dd46263dfbb4c9522b4e6bbe9873a1db6cb340d431"
+    },
+    {
+      "bytes": 67255,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v004.pt",
+      "sha256": "dfb8ea80124e01e0658790d88cd548e0290f6cf1b0666e6ec64b40ab800d7153"
+    },
+    {
+      "bytes": 67255,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v005.pt",
+      "sha256": "6083ba6af8c20dee660e2036d514da68a8b3442e2084f3a9f2b1162a8dd80482"
+    },
+    {
+      "bytes": 67255,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v006.pt",
+      "sha256": "1359007bd948478c3d71bd92f2f68f98ea57396c3bda7bb1a148474745dceb34"
+    },
+    {
+      "bytes": 67255,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v007.pt",
+      "sha256": "47365e4c69306676ccc6a1dbd4e927110eed65ab1958b176185528b10743a34d"
+    },
+    {
+      "bytes": 67255,
+      "path": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v008.pt",
+      "sha256": "eb05df5d862d9ab29c497035202056f4ac5cdabc1fd954d0fb14f41e10760101"
+    },
+    {
+      "bytes": 3396,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\audit.json",
+      "sha256": "9338f043c6d510f02537e3e0d663104e7cbb4a5aa79b6cd8423f149ca40d3948"
+    },
+    {
+      "bytes": 3398,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\audit.log",
+      "sha256": "847dba53b5072931020a051992042eab0bfe56a3669c489b897fba31a81fde6e"
+    },
+    {
+      "bytes": 1119,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\diagnostics.json",
+      "sha256": "31b9803872240004b95a0b83cbadc6fc9a9af3f2dedc0127018ffacb05dbdc66"
+    },
+    {
+      "bytes": 270,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\final.log",
+      "sha256": "c3f2f41eebc87000db51fc90adcc4382c665a1423be24d80ecb417230d941ec1"
+    },
+    {
+      "bytes": 1973,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\initial-failure.log",
+      "sha256": "3d088deea60cdb046fddbe70d2c80f9fcdd1c55740fe206ff60057ecd83504ab"
+    },
+    {
+      "bytes": 1548,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\plan.json",
+      "sha256": "b4f5a9d1306762d6988d45cce63cb991c2b070bcaff49c8c9ca979ffd223dff7"
+    },
+    {
+      "bytes": 39,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\prepare.log",
+      "sha256": "8f613b8d9a95e97bc778d947a2b9b36573022f88c7b6d8a9220467302dba52ef"
+    },
+    {
+      "bytes": 310,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\recovery.json",
+      "sha256": "bc3ef0eecf3447dca8c13a7679dbca93bb74cea2da952cce6622a9ffb54c63aa"
+    },
+    {
+      "bytes": 29811,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\result.json",
+      "sha256": "528aef7b6664feee8253c8d4d3c02c941e4a8999614f5a46db75c11a3b9e7740"
+    },
+    {
+      "bytes": 24865,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\training.json",
+      "sha256": "8359d58d50e10a8746caa250f41ac8bd44e12189b9c1e9c78633fdb79b59c606"
+    },
+    {
+      "bytes": 534,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\training.log",
+      "sha256": "5828c0af617cbc9338475610bf063b7dd8117fb9f96f17282e819f77adcb1f4a"
+    },
+    {
+      "bytes": 1135,
+      "path": "C:\\chess-intelligence-lab\\runs\\s003\\uci-smoke.json",
+      "sha256": "18b5248b66b7eaa262e2aafb432cf3d33c122803d73e77f6f72840674ba080f7"
+    }
+  ],
+  "final_runner_sha256": "6df030e41d905262adf290e6eddf4e41727e40e47c091538b3d9a9d238a55af7",
+  "preserved_s002_artifacts": "Every file in S002-artifact-inventory.json reverified unchanged",
+  "root": "C:\\chess-intelligence-lab"
+}

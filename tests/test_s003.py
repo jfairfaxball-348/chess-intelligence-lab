@@ -44,7 +44,14 @@ def test_configured_checkpoint_roundtrip(tmp_path,normalized,residual,loss):
     model=load_evaluator(str(c))
     assert model.normalized==normalized and model.residual==residual
     assert evaluate(c,v)['neural']==result['selected_validation']
-    assert isinstance(NeuralCP(str(c))(chess.Board()),int)
+    adapter = NeuralCP(str(c))
+    board = chess.Board()
+    for move in ['e2e4', 'd7d5', 'e4d5']:
+        board.push_uci(move)
+    x = torch.tensor([encode_board(board, normalized=normalized)])
+    with torch.inference_mode():
+        expected = int(round(100 * float(model(x).item())))
+    assert adapter(board) == expected
     payload=torch.load(c,weights_only=True)
     payload['encoding_version']='wrong-version'
     torch.save(payload,tmp_path/'broken.pt')

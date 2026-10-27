@@ -145,6 +145,10 @@ def fit(config):
         save(progress_path,progress)
         print(index,normalized,residual,loss,metrics['selected_validation'],flush=True)
     selected=min(progress['trials'],key=lambda t:t['selected_validation']['mae_pawns'])
+    if 'selection_frozen_utc' in progress:
+        assert progress['selected_index']==selected['index']
+        assert progress['selected_checkpoint']==selected['checkpoint']
+        return progress
     progress['selected_index']=selected['index']
     progress['selected_checkpoint']=selected['checkpoint']
     progress['selection_frozen_utc']=datetime.now(timezone.utc).isoformat()

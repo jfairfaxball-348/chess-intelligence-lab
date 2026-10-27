@@ -1,0 +1,122 @@
+{
+  "all_source_fens_and_teacher_pvs_legal": true,
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 303,
+  "canonical_overlap_with_all_s002_splits": 0,
+  "checkpoint_hashes_verified": 8,
+  "duplicate_full_game_trajectories": 0,
+  "finite_positions": 750,
+  "finite_source_games": 20,
+  "fresh_positions": 777,
+  "fresh_source_games": 20,
+  "game_bootstrap_95_percentile_interval_pawns": [
+    0.12831826906377722,
+    0.4086685697708561
+  ],
+  "mate_positions": 27,
+  "paired_pooled_neural_minus_material_mae_pawns": 0.2569262984526158,
+  "per_game": {
+    "s003-holdout-v001-0000": {
+      "material_sum": 23.540000000000003,
+      "n": 40,
+      "neural_sum": 41.55612647533417
+    },
+    "s003-holdout-v001-0001": {
+      "material_sum": 75.87,
+      "n": 40,
+      "neural_sum": 89.4060507118702
+    },
+    "s003-holdout-v001-0002": {
+      "material_sum": 70.93,
+      "n": 35,
+      "neural_sum": 65.80451864004135
+    },
+    "s003-holdout-v001-0003": {
+      "material_sum": 90.03,
+      "n": 38,
+      "neural_sum": 138.00137102603912
+    },
+    "s003-holdout-v001-0004": {
+      "material_sum": 69.44000000000001,
+      "n": 36,
+      "neural_sum": 87.46884855628014
+    },
+    "s003-holdout-v001-0005": {
+      "material_sum": 23.04,
+      "n": 25,
+      "neural_sum": 25.53940984606743
+    },
+    "s003-holdout-v001-0006": {
+      "material_sum": 84.06000000000002,
+      "n": 36,
+      "neural_sum": 79.39088010787964
+    },
+    "s003-holdout-v001-0007": {
+      "material_sum": 61.74000000000001,
+      "n": 35,
+      "neural_sum": 61.710967153310776
+    },
+    "s003-holdout-v001-0008": {
+      "material_sum": 67.2,
+      "n": 37,
+      "neural_sum": 84.58808118104935
+    },
+    "s003-holdout-v001-0009": {
+      "material_sum": 130.81,
+      "n": 40,
+      "neural_sum": 136.69923259317875
+    },
+    "s003-holdout-v001-0010": {
+      "material_sum": 43.190000000000005,
+      "n": 40,
+      "neural_sum": 54.710132360458374
+    },
+    "s003-holdout-v001-0011": {
+      "material_sum": 109.22999999999998,
+      "n": 39,
+      "neural_sum": 103.82517997175455
+    },
+    "s003-holdout-v001-0012": {
+      "material_sum": 49.51999999999999,
+      "n": 38,
+      "neural_sum": 53.98735985159874
+    },
+    "s003-holdout-v001-0013": {
+      "material_sum": 64.68,
+      "n": 39,
+      "neural_sum": 80.21364170312881
+    },
+    "s003-holdout-v001-0014": {
+      "material_sum": 40.17999999999999,
+      "n": 40,
+      "neural_sum": 61.455496817827225
+    },
+    "s003-holdout-v001-0015": {
+      "material_sum": 50.25,
+      "n": 40,
+      "neural_sum": 66.58204033970833
+    },
+    "s003-holdout-v001-0016": {
+      "material_sum": 77.23999999999998,
+      "n": 38,
+      "neural_sum": 74.5927685201168
+    },
+    "s003-holdout-v001-0017": {
+      "material_sum": 47.220000000000006,
+      "n": 38,
+      "neural_sum": 60.41201373934746
+    },
+    "s003-holdout-v001-0018": {
+      "material_sum": 142.15999999999997,
+      "n": 37,
+      "neural_sum": 144.79076424241066
+    },
+    "s003-holdout-v001-0019": {
+      "material_sum": 91.72999999999999,
+      "n": 39,
+      "neural_sum": 94.01984000205994
+    }
+  },
+  "status": "PASS",
+  "uncertainty_limit": "Game resampling of this shallow-engine corpus; not generalization to human chess or strength"
+}

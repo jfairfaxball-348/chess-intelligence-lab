@@ -1,0 +1,1051 @@
+{
+  "annotation": {
+    "annotated_positions": 777,
+    "mate_scores_have_null_target_cp": true,
+    "output": "C:\\chess-intelligence-lab\\data\\teacher\\s003-holdout-v001\\test.jsonl",
+    "requested_positions": 777,
+    "teacher_id": {
+      "author": "the Stockfish developers (see AUTHORS file)",
+      "name": "Stockfish 19"
+    }
+  },
+  "claim_limit": "Predictive accuracy only; correlated positions; no playing strength claim",
+  "encoding": "absolute or STM according to checkpoint",
+  "finished_utc": "2026-10-27T13:41:37.675406+00:00",
+  "fresh_test": {
+    "label_sources": [
+      "stockfish_uci"
+    ],
+    "material_baseline_mae_pawns": 1.882747,
+    "neural": {
+      "mae_pawns": 2.139673,
+      "rmse_pawns": 2.85517
+    },
+    "positions": 750,
+    "warning": "Value loss is not playing strength; mate targets excluded"
+  },
+  "fresh_test_sha256": "a6cf90b7d00c939d2aface1ae9004539c58bcfb0954034158b4f43d0502badc5",
+  "frozen_s002_on_fresh_test": {
+    "label_sources": [
+      "stockfish_uci"
+    ],
+    "material_baseline_mae_pawns": 1.882747,
+    "neural": {
+      "mae_pawns": 3.458498,
+      "rmse_pawns": 4.765829
+    },
+    "positions": 750,
+    "warning": "Value loss is not playing strength; mate targets excluded"
+  },
+  "model_version": "tinyconv-config-v2",
+  "plan": {
+    "base_git_sha": "956395aa955e99836984e02e1d160dd2bb395a30",
+    "batch_size": 32,
+    "decision": "Compare selected neural versus material and frozen S002 checkpoint on one fresh holdout; no further tuning afterward",
+    "epochs": 20,
+    "factors": {
+      "loss": [
+        "mse",
+        "huber"
+      ],
+      "normalized": [
+        false,
+        true
+      ],
+      "residual": [
+        false,
+        true
+      ]
+    },
+    "fresh_games": 20,
+    "fresh_generation_seed": 30361027,
+    "generation": {
+      "depth": 4,
+      "hash_mb": 32,
+      "multipv": 3,
+      "ply_cap": 240,
+      "threads": 1,
+      "weights": [
+        8,
+        2,
+        1
+      ]
+    },
+    "learning_rate": 0.002,
+    "limits": "Same CNN and parameter count; no timed match, no architecture expansion, one training seed",
+    "residual_initialization": "Zero final-layer weights and bias, exact material at epoch zero",
+    "sampling": "40 evenly stratified positions/game at ply >=8",
+    "seed": 7,
+    "selection": "Best validation MAE including epoch zero; between-trial validation MAE, stable trial order for ties",
+    "session": "S003",
+    "source": "locally generated games, no third-party game corpus; Stockfish GPLv3",
+    "teacher": {
+      "depth": 8,
+      "engine_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+      "hash_mb": 32,
+      "threads": 1
+    },
+    "train_sha256": "6f309e849bdb3785fd91220eaf255655f5fd5f3e170943607e4ff02bf3bf9366",
+    "val_sha256": "30b5d7e2180add5c5f56f42ee7ef3216218577d85701f89950791635df56e399",
+    "width": 32
+  },
+  "selection": {
+    "executed_git_sha": "4f17d522530fa40e13ba52e413f2799af5c2384a",
+    "numerical_source_hashes": {
+      "src\\chesslab\\__init__.py": "db942b871d8c559e3de9889628aa074c44be3002a17438693f7c670aff31431b",
+      "src\\chesslab\\cli.py": "74cbaaebc77c6701fa7908994631e9beb4e7bb21b4734894ca06e493f417c668",
+      "src\\chesslab\\data.py": "80b102d9ba3a0ae1a342f0a3dfff1174c17ab07e92828056ea1c2b19f2d2f120",
+      "src\\chesslab\\encoding.py": "8fc9fcc5fdc7c05248599c09934e48a3ab8de5110ce3b14219a86a3951d0cdea",
+      "src\\chesslab\\material.py": "c4a92523d6af4d984586b85cd4f3a8a46f564f7fceea4785f8ad499d8c9b6eca",
+      "src\\chesslab\\model.py": "17484e2bdce8dc383f68611dbe4da920c33d92014a2291629181a9076f756c2f",
+      "src\\chesslab\\search.py": "2a2e9df1574db19e1b6f07b2eb4fef7796dcf9a4300f5c7087ca3ee1c12542c1",
+      "src\\chesslab\\teacher.py": "915c0912194885288681609b5e217a32490654d665e52211096570566c5340a1",
+      "src\\chesslab\\train.py": "ffa619e95ecad1350b27b6f6ad2de79dafc765b7afd4377fc92684f5208bb5d3",
+      "src\\chesslab\\uci.py": "67761e07247fa120426f1293aed3a26add836e9211baef9f2ce77544fc3805f4"
+    },
+    "runner_sha256": "1caece68cab071ace2b84d26ebc192a9768d67c2e645d1cc42e8bcea6da86066",
+    "selected_checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v007.pt",
+    "selected_index": 7,
+    "selection_frozen_utc": "2026-10-27T13:41:13.170167+00:00",
+    "started_utc": "2026-10-27T13:40:27.543245+00:00",
+    "trials": [
+      {
+        "batch_size": 32,
+        "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v001.pt",
+        "checkpoint_sha256": "fc440ecacdab2c34707278f799ae2506d7ac54f357dadb9d6faf1207bb632d96",
+        "device": "cpu",
+        "epochs": 20,
+        "experiment": "scalar-distillation",
+        "final_validation": {
+          "mae_pawns": 2.822334,
+          "rmse_pawns": 4.053586
+        },
+        "history": [
+          {
+            "mae_pawns": 3.603928,
+            "rmse_pawns": 4.820568
+          },
+          {
+            "mae_pawns": 3.947607,
+            "rmse_pawns": 5.3392
+          },
+          {
+            "mae_pawns": 3.632673,
+            "rmse_pawns": 4.874066
+          },
+          {
+            "mae_pawns": 3.59237,
+            "rmse_pawns": 4.787522
+          },
+          {
+            "mae_pawns": 3.570827,
+            "rmse_pawns": 4.874001
+          },
+          {
+            "mae_pawns": 3.450097,
+            "rmse_pawns": 4.685556
+          },
+          {
+            "mae_pawns": 3.243203,
+            "rmse_pawns": 4.412532
+          },
+          {
+            "mae_pawns": 3.267391,
+            "rmse_pawns": 4.438027
+          },
+          {
+            "mae_pawns": 3.34187,
+            "rmse_pawns": 4.460729
+          },
+          {
+            "mae_pawns": 3.041477,
+            "rmse_pawns": 4.183825
+          },
+          {
+            "mae_pawns": 2.992034,
+            "rmse_pawns": 4.225435
+          },
+          {
+            "mae_pawns": 2.906502,
+            "rmse_pawns": 4.092035
+          },
+          {
+            "mae_pawns": 2.921674,
+            "rmse_pawns": 4.012024
+          },
+          {
+            "mae_pawns": 2.896291,
+            "rmse_pawns": 4.060855
+          },
+          {
+            "mae_pawns": 3.113876,
+            "rmse_pawns": 4.482672
+          },
+          {
+            "mae_pawns": 2.968418,
+            "rmse_pawns": 4.212753
+          },
+          {
+            "mae_pawns": 3.208949,
+            "rmse_pawns": 4.743359
+          },
+          {
+            "mae_pawns": 3.447846,
+            "rmse_pawns": 4.666295
+          },
+          {
+            "mae_pawns": 3.023043,
+            "rmse_pawns": 4.303687
+          },
+          {
+            "mae_pawns": 2.822334,
+            "rmse_pawns": 4.053586
+          }
+        ],
+        "include_initial_in_selection": true,
+        "index": 1,
+        "initial_validation": {
+          "mae_pawns": 3.607506,
+          "rmse_pawns": 4.958859
+        },
+        "label_source": "stockfish_uci",
+        "learning_rate": 0.002,
+        "loss": "mse",
+        "normalized": false,
+        "parameters": 15841,
+        "residual": false,
+        "seconds": 6.577999999979511,
+        "seed": 7,
+        "selected_epoch": 20,
+        "selected_validation": {
+          "mae_pawns": 2.822334,
+          "rmse_pawns": 4.053586
+        },
+        "status": "predictive evaluation only; no strength claim",
+        "train_count": 2520,
+        "val_count": 316,
+        "width": 32
+      },
+      {
+        "batch_size": 32,
+        "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v002.pt",
+        "checkpoint_sha256": "d846f76fbf9727e951f9deb303c120b9d88d12e203054ba1fafa2c0c0e8c3fc7",
+        "device": "cpu",
+        "epochs": 20,
+        "experiment": "scalar-distillation",
+        "final_validation": {
+          "mae_pawns": 3.086057,
+          "rmse_pawns": 4.263864
+        },
+        "history": [
+          {
+            "mae_pawns": 3.592243,
+            "rmse_pawns": 4.785911
+          },
+          {
+            "mae_pawns": 4.072148,
+            "rmse_pawns": 5.641891
+          },
+          {
+            "mae_pawns": 3.436708,
+            "rmse_pawns": 4.676893
+          },
+          {
+            "mae_pawns": 3.659475,
+            "rmse_pawns": 4.956985
+          },
+          {
+            "mae_pawns": 3.457551,
+            "rmse_pawns": 4.601547
+          },
+          {
+            "mae_pawns": 3.468372,
+            "rmse_pawns": 4.723936
+          },
+          {
+            "mae_pawns": 3.479065,
+            "rmse_pawns": 4.74143
+          },
+          {
+            "mae_pawns": 3.391392,
+            "rmse_pawns": 4.653776
+          },
+          {
+            "mae_pawns": 3.657866,
+            "rmse_pawns": 5.130349
+          },
+          {
+            "mae_pawns": 3.28642,
+            "rmse_pawns": 4.638361
+          },
+          {
+            "mae_pawns": 3.157929,
+            "rmse_pawns": 4.3754
+          },
+          {
+            "mae_pawns": 3.173553,
+            "rmse_pawns": 4.398892
+          },
+          {
+            "mae_pawns": 3.124111,
+            "rmse_pawns": 4.418319
+          },
+          {
+            "mae_pawns": 3.16135,
+            "rmse_pawns": 4.41544
+          },
+          {
+            "mae_pawns": 3.546277,
+            "rmse_pawns": 4.767321
+          },
+          {
+            "mae_pawns": 3.300545,
+            "rmse_pawns": 4.549216
+          },
+          {
+            "mae_pawns": 3.122352,
+            "rmse_pawns": 4.323903
+          },
+          {
+            "mae_pawns": 3.076837,
+            "rmse_pawns": 4.278947
+          },
+          {
+            "mae_pawns": 3.009174,
+            "rmse_pawns": 4.1556
+          },
+          {
+            "mae_pawns": 3.086057,
+            "rmse_pawns": 4.263864
+          }
+        ],
+        "include_initial_in_selection": true,
+        "index": 2,
+        "initial_validation": {
+          "mae_pawns": 3.607506,
+          "rmse_pawns": 4.958859
+        },
+        "label_source": "stockfish_uci",
+        "learning_rate": 0.002,
+        "loss": "huber",
+        "normalized": false,
+        "parameters": 15841,
+        "residual": false,
+        "seconds": 5.422000000020489,
+        "seed": 7,
+        "selected_epoch": 19,
+        "selected_validation": {
+          "mae_pawns": 3.009174,
+          "rmse_pawns": 4.1556
+        },
+        "status": "predictive evaluation only; no strength claim",
+        "train_count": 2520,
+        "val_count": 316,
+        "width": 32
+      },
+      {
+        "batch_size": 32,
+        "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v003.pt",
+        "checkpoint_sha256": "9de4b394c4375457c56126dd46263dfbb4c9522b4e6bbe9873a1db6cb340d431",
+        "device": "cpu",
+        "epochs": 20,
+        "experiment": "scalar-distillation",
+        "final_validation": {
+          "mae_pawns": 2.718515,
+          "rmse_pawns": 3.524302
+        },
+        "history": [
+          {
+            "mae_pawns": 2.294116,
+            "rmse_pawns": 3.020473
+          },
+          {
+            "mae_pawns": 2.26967,
+            "rmse_pawns": 2.997863
+          },
+          {
+            "mae_pawns": 2.294989,
+            "rmse_pawns": 3.022169
+          },
+          {
+            "mae_pawns": 2.306772,
+            "rmse_pawns": 3.028364
+          },
+          {
+            "mae_pawns": 2.391394,
+            "rmse_pawns": 3.101284
+          },
+          {
+            "mae_pawns": 2.400276,
+            "rmse_pawns": 3.103798
+          },
+          {
+            "mae_pawns": 2.382873,
+            "rmse_pawns": 3.078948
+          },
+          {
+            "mae_pawns": 2.382915,
+            "rmse_pawns": 3.079276
+          },
+          {
+            "mae_pawns": 2.450433,
+            "rmse_pawns": 3.132048
+          },
+          {
+            "mae_pawns": 2.508625,
+            "rmse_pawns": 3.200469
+          },
+          {
+            "mae_pawns": 2.614331,
+            "rmse_pawns": 3.377087
+          },
+          {
+            "mae_pawns": 2.566281,
+            "rmse_pawns": 3.276537
+          },
+          {
+            "mae_pawns": 2.666159,
+            "rmse_pawns": 3.422888
+          },
+          {
+            "mae_pawns": 2.61942,
+            "rmse_pawns": 3.385787
+          },
+          {
+            "mae_pawns": 2.551948,
+            "rmse_pawns": 3.251416
+          },
+          {
+            "mae_pawns": 2.635249,
+            "rmse_pawns": 3.384274
+          },
+          {
+            "mae_pawns": 2.596343,
+            "rmse_pawns": 3.355644
+          },
+          {
+            "mae_pawns": 2.674874,
+            "rmse_pawns": 3.46646
+          },
+          {
+            "mae_pawns": 2.562863,
+            "rmse_pawns": 3.298682
+          },
+          {
+            "mae_pawns": 2.718515,
+            "rmse_pawns": 3.524302
+          }
+        ],
+        "include_initial_in_selection": true,
+        "index": 3,
+        "initial_validation": {
+          "mae_pawns": 2.235201,
+          "rmse_pawns": 2.960674
+        },
+        "label_source": "stockfish_uci",
+        "learning_rate": 0.002,
+        "loss": "mse",
+        "normalized": false,
+        "parameters": 15841,
+        "residual": true,
+        "seconds": 5.577999999979511,
+        "seed": 7,
+        "selected_epoch": 0,
+        "selected_validation": {
+          "mae_pawns": 2.235201,
+          "rmse_pawns": 2.960674
+        },
+        "status": "predictive evaluation only; no strength claim",
+        "train_count": 2520,
+        "val_count": 316,
+        "width": 32
+      },
+      {
+        "batch_size": 32,
+        "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v004.pt",
+        "checkpoint_sha256": "dfb8ea80124e01e0658790d88cd548e0290f6cf1b0666e6ec64b40ab800d7153",
+        "device": "cpu",
+        "epochs": 20,
+        "experiment": "scalar-distillation",
+        "final_validation": {
+          "mae_pawns": 2.710759,
+          "rmse_pawns": 3.437636
+        },
+        "history": [
+          {
+            "mae_pawns": 2.267129,
+            "rmse_pawns": 3.002487
+          },
+          {
+            "mae_pawns": 2.264457,
+            "rmse_pawns": 3.001577
+          },
+          {
+            "mae_pawns": 2.269144,
+            "rmse_pawns": 3.002119
+          },
+          {
+            "mae_pawns": 2.320645,
+            "rmse_pawns": 3.060863
+          },
+          {
+            "mae_pawns": 2.330851,
+            "rmse_pawns": 3.052551
+          },
+          {
+            "mae_pawns": 2.356846,
+            "rmse_pawns": 3.08877
+          },
+          {
+            "mae_pawns": 2.449966,
+            "rmse_pawns": 3.182738
+          },
+          {
+            "mae_pawns": 2.511947,
+            "rmse_pawns": 3.228347
+          },
+          {
+            "mae_pawns": 2.463268,
+            "rmse_pawns": 3.18792
+          },
+          {
+            "mae_pawns": 2.609089,
+            "rmse_pawns": 3.342258
+          },
+          {
+            "mae_pawns": 2.709236,
+            "rmse_pawns": 3.483046
+          },
+          {
+            "mae_pawns": 2.611793,
+            "rmse_pawns": 3.314612
+          },
+          {
+            "mae_pawns": 2.727833,
+            "rmse_pawns": 3.458791
+          },
+          {
+            "mae_pawns": 2.62527,
+            "rmse_pawns": 3.352033
+          },
+          {
+            "mae_pawns": 2.69946,
+            "rmse_pawns": 3.436701
+          },
+          {
+            "mae_pawns": 2.621671,
+            "rmse_pawns": 3.315514
+          },
+          {
+            "mae_pawns": 2.700945,
+            "rmse_pawns": 3.439382
+          },
+          {
+            "mae_pawns": 2.687102,
+            "rmse_pawns": 3.409352
+          },
+          {
+            "mae_pawns": 2.528707,
+            "rmse_pawns": 3.193019
+          },
+          {
+            "mae_pawns": 2.710759,
+            "rmse_pawns": 3.437636
+          }
+        ],
+        "include_initial_in_selection": true,
+        "index": 4,
+        "initial_validation": {
+          "mae_pawns": 2.235201,
+          "rmse_pawns": 2.960674
+        },
+        "label_source": "stockfish_uci",
+        "learning_rate": 0.002,
+        "loss": "huber",
+        "normalized": false,
+        "parameters": 15841,
+        "residual": true,
+        "seconds": 5.73399999999674,
+        "seed": 7,
+        "selected_epoch": 0,
+        "selected_validation": {
+          "mae_pawns": 2.235201,
+          "rmse_pawns": 2.960674
+        },
+        "status": "predictive evaluation only; no strength claim",
+        "train_count": 2520,
+        "val_count": 316,
+        "width": 32
+      },
+      {
+        "batch_size": 32,
+        "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v005.pt",
+        "checkpoint_sha256": "6083ba6af8c20dee660e2036d514da68a8b3442e2084f3a9f2b1162a8dd80482",
+        "device": "cpu",
+        "epochs": 20,
+        "experiment": "scalar-distillation",
+        "final_validation": {
+          "mae_pawns": 2.488858,
+          "rmse_pawns": 3.181204
+        },
+        "history": [
+          {
+            "mae_pawns": 3.629463,
+            "rmse_pawns": 4.967053
+          },
+          {
+            "mae_pawns": 3.775872,
+            "rmse_pawns": 4.975462
+          },
+          {
+            "mae_pawns": 3.191484,
+            "rmse_pawns": 4.31122
+          },
+          {
+            "mae_pawns": 2.897664,
+            "rmse_pawns": 3.954876
+          },
+          {
+            "mae_pawns": 2.818586,
+            "rmse_pawns": 3.891809
+          },
+          {
+            "mae_pawns": 2.69647,
+            "rmse_pawns": 3.707335
+          },
+          {
+            "mae_pawns": 2.702974,
+            "rmse_pawns": 3.723297
+          },
+          {
+            "mae_pawns": 2.560813,
+            "rmse_pawns": 3.572475
+          },
+          {
+            "mae_pawns": 2.48844,
+            "rmse_pawns": 3.464425
+          },
+          {
+            "mae_pawns": 2.536471,
+            "rmse_pawns": 3.488883
+          },
+          {
+            "mae_pawns": 2.50538,
+            "rmse_pawns": 3.393472
+          },
+          {
+            "mae_pawns": 2.541505,
+            "rmse_pawns": 3.394465
+          },
+          {
+            "mae_pawns": 2.623832,
+            "rmse_pawns": 3.468885
+          },
+          {
+            "mae_pawns": 2.609639,
+            "rmse_pawns": 3.439272
+          },
+          {
+            "mae_pawns": 2.477643,
+            "rmse_pawns": 3.23878
+          },
+          {
+            "mae_pawns": 2.388872,
+            "rmse_pawns": 3.163859
+          },
+          {
+            "mae_pawns": 2.412068,
+            "rmse_pawns": 3.169082
+          },
+          {
+            "mae_pawns": 2.677709,
+            "rmse_pawns": 3.52097
+          },
+          {
+            "mae_pawns": 2.476368,
+            "rmse_pawns": 3.273733
+          },
+          {
+            "mae_pawns": 2.488858,
+            "rmse_pawns": 3.181204
+          }
+        ],
+        "include_initial_in_selection": true,
+        "index": 5,
+        "initial_validation": {
+          "mae_pawns": 3.6076,
+          "rmse_pawns": 4.95894
+        },
+        "label_source": "stockfish_uci",
+        "learning_rate": 0.002,
+        "loss": "mse",
+        "normalized": true,
+        "parameters": 15841,
+        "residual": false,
+        "seconds": 5.625,
+        "seed": 7,
+        "selected_epoch": 16,
+        "selected_validation": {
+          "mae_pawns": 2.388872,
+          "rmse_pawns": 3.163859
+        },
+        "status": "predictive evaluation only; no strength claim",
+        "train_count": 2520,
+        "val_count": 316,
+        "width": 32
+      },
+      {
+        "batch_size": 32,
+        "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v006.pt",
+        "checkpoint_sha256": "1359007bd948478c3d71bd92f2f68f98ea57396c3bda7bb1a148474745dceb34",
+        "device": "cpu",
+        "epochs": 20,
+        "experiment": "scalar-distillation",
+        "final_validation": {
+          "mae_pawns": 2.36874,
+          "rmse_pawns": 3.201074
+        },
+        "history": [
+          {
+            "mae_pawns": 3.609244,
+            "rmse_pawns": 4.958051
+          },
+          {
+            "mae_pawns": 3.99406,
+            "rmse_pawns": 5.684491
+          },
+          {
+            "mae_pawns": 3.075406,
+            "rmse_pawns": 4.262361
+          },
+          {
+            "mae_pawns": 3.153285,
+            "rmse_pawns": 4.316526
+          },
+          {
+            "mae_pawns": 3.207427,
+            "rmse_pawns": 4.403725
+          },
+          {
+            "mae_pawns": 2.698408,
+            "rmse_pawns": 3.783235
+          },
+          {
+            "mae_pawns": 2.760393,
+            "rmse_pawns": 3.821824
+          },
+          {
+            "mae_pawns": 2.66436,
+            "rmse_pawns": 3.702459
+          },
+          {
+            "mae_pawns": 2.656176,
+            "rmse_pawns": 3.646846
+          },
+          {
+            "mae_pawns": 2.497396,
+            "rmse_pawns": 3.447856
+          },
+          {
+            "mae_pawns": 2.575006,
+            "rmse_pawns": 3.537815
+          },
+          {
+            "mae_pawns": 2.532201,
+            "rmse_pawns": 3.473938
+          },
+          {
+            "mae_pawns": 2.997597,
+            "rmse_pawns": 3.972308
+          },
+          {
+            "mae_pawns": 2.490682,
+            "rmse_pawns": 3.363364
+          },
+          {
+            "mae_pawns": 2.42669,
+            "rmse_pawns": 3.312593
+          },
+          {
+            "mae_pawns": 2.397758,
+            "rmse_pawns": 3.260618
+          },
+          {
+            "mae_pawns": 2.405351,
+            "rmse_pawns": 3.245474
+          },
+          {
+            "mae_pawns": 2.665664,
+            "rmse_pawns": 3.533818
+          },
+          {
+            "mae_pawns": 2.340533,
+            "rmse_pawns": 3.187778
+          },
+          {
+            "mae_pawns": 2.36874,
+            "rmse_pawns": 3.201074
+          }
+        ],
+        "include_initial_in_selection": true,
+        "index": 6,
+        "initial_validation": {
+          "mae_pawns": 3.6076,
+          "rmse_pawns": 4.95894
+        },
+        "label_source": "stockfish_uci",
+        "learning_rate": 0.002,
+        "loss": "huber",
+        "normalized": true,
+        "parameters": 15841,
+        "residual": false,
+        "seconds": 5.313000000023749,
+        "seed": 7,
+        "selected_epoch": 19,
+        "selected_validation": {
+          "mae_pawns": 2.340533,
+          "rmse_pawns": 3.187778
+        },
+        "status": "predictive evaluation only; no strength claim",
+        "train_count": 2520,
+        "val_count": 316,
+        "width": 32
+      },
+      {
+        "batch_size": 32,
+        "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v007.pt",
+        "checkpoint_sha256": "47365e4c69306676ccc6a1dbd4e927110eed65ab1958b176185528b10743a34d",
+        "device": "cpu",
+        "epochs": 20,
+        "experiment": "scalar-distillation",
+        "final_validation": {
+          "mae_pawns": 2.236066,
+          "rmse_pawns": 2.977778
+        },
+        "history": [
+          {
+            "mae_pawns": 2.255718,
+            "rmse_pawns": 2.95568
+          },
+          {
+            "mae_pawns": 2.237833,
+            "rmse_pawns": 2.942779
+          },
+          {
+            "mae_pawns": 2.26704,
+            "rmse_pawns": 2.959988
+          },
+          {
+            "mae_pawns": 2.226951,
+            "rmse_pawns": 2.936415
+          },
+          {
+            "mae_pawns": 2.280255,
+            "rmse_pawns": 2.962257
+          },
+          {
+            "mae_pawns": 2.241558,
+            "rmse_pawns": 2.937286
+          },
+          {
+            "mae_pawns": 2.240145,
+            "rmse_pawns": 2.931764
+          },
+          {
+            "mae_pawns": 2.225673,
+            "rmse_pawns": 2.921823
+          },
+          {
+            "mae_pawns": 2.239657,
+            "rmse_pawns": 2.92254
+          },
+          {
+            "mae_pawns": 2.208903,
+            "rmse_pawns": 2.902153
+          },
+          {
+            "mae_pawns": 2.359893,
+            "rmse_pawns": 3.053549
+          },
+          {
+            "mae_pawns": 2.288929,
+            "rmse_pawns": 2.975911
+          },
+          {
+            "mae_pawns": 2.445188,
+            "rmse_pawns": 3.14531
+          },
+          {
+            "mae_pawns": 2.414976,
+            "rmse_pawns": 3.129229
+          },
+          {
+            "mae_pawns": 2.246188,
+            "rmse_pawns": 2.935164
+          },
+          {
+            "mae_pawns": 2.21979,
+            "rmse_pawns": 2.896511
+          },
+          {
+            "mae_pawns": 2.202618,
+            "rmse_pawns": 2.900674
+          },
+          {
+            "mae_pawns": 2.305248,
+            "rmse_pawns": 3.039076
+          },
+          {
+            "mae_pawns": 2.296446,
+            "rmse_pawns": 3.014764
+          },
+          {
+            "mae_pawns": 2.236066,
+            "rmse_pawns": 2.977778
+          }
+        ],
+        "include_initial_in_selection": true,
+        "index": 7,
+        "initial_validation": {
+          "mae_pawns": 2.235201,
+          "rmse_pawns": 2.960674
+        },
+        "label_source": "stockfish_uci",
+        "learning_rate": 0.002,
+        "loss": "mse",
+        "normalized": true,
+        "parameters": 15841,
+        "residual": true,
+        "seconds": 5.686999999976251,
+        "seed": 7,
+        "selected_epoch": 17,
+        "selected_validation": {
+          "mae_pawns": 2.202618,
+          "rmse_pawns": 2.900674
+        },
+        "status": "predictive evaluation only; no strength claim",
+        "train_count": 2520,
+        "val_count": 316,
+        "width": 32
+      },
+      {
+        "batch_size": 32,
+        "checkpoint": "C:\\chess-intelligence-lab\\checkpoints\\s003\\model-v008.pt",
+        "checkpoint_sha256": "eb05df5d862d9ab29c497035202056f4ac5cdabc1fd954d0fb14f41e10760101",
+        "device": "cpu",
+        "epochs": 20,
+        "experiment": "scalar-distillation",
+        "final_validation": {
+          "mae_pawns": 2.367918,
+          "rmse_pawns": 3.060065
+        },
+        "history": [
+          {
+            "mae_pawns": 2.230824,
+            "rmse_pawns": 2.938771
+          },
+          {
+            "mae_pawns": 2.225674,
+            "rmse_pawns": 2.937634
+          },
+          {
+            "mae_pawns": 2.227725,
+            "rmse_pawns": 2.938601
+          },
+          {
+            "mae_pawns": 2.22569,
+            "rmse_pawns": 2.936747
+          },
+          {
+            "mae_pawns": 2.233192,
+            "rmse_pawns": 2.940416
+          },
+          {
+            "mae_pawns": 2.224617,
+            "rmse_pawns": 2.940511
+          },
+          {
+            "mae_pawns": 2.228206,
+            "rmse_pawns": 2.933925
+          },
+          {
+            "mae_pawns": 2.228602,
+            "rmse_pawns": 2.931845
+          },
+          {
+            "mae_pawns": 2.218412,
+            "rmse_pawns": 2.924215
+          },
+          {
+            "mae_pawns": 2.263318,
+            "rmse_pawns": 2.956365
+          },
+          {
+            "mae_pawns": 2.345212,
+            "rmse_pawns": 3.071019
+          },
+          {
+            "mae_pawns": 2.234394,
+            "rmse_pawns": 2.938968
+          },
+          {
+            "mae_pawns": 2.343659,
+            "rmse_pawns": 3.049743
+          },
+          {
+            "mae_pawns": 2.325941,
+            "rmse_pawns": 3.054313
+          },
+          {
+            "mae_pawns": 2.340645,
+            "rmse_pawns": 3.045894
+          },
+          {
+            "mae_pawns": 2.346025,
+            "rmse_pawns": 3.038199
+          },
+          {
+            "mae_pawns": 2.318405,
+            "rmse_pawns": 2.996277
+          },
+          {
+            "mae_pawns": 2.346411,
+            "rmse_pawns": 3.053002
+          },
+          {
+            "mae_pawns": 2.30109,
+            "rmse_pawns": 3.00478
+          },
+          {
+            "mae_pawns": 2.367918,
+            "rmse_pawns": 3.060065
+          }
+        ],
+        "include_initial_in_selection": true,
+        "index": 8,
+        "initial_validation": {
+          "mae_pawns": 2.235201,
+          "rmse_pawns": 2.960674
+        },
+        "label_source": "stockfish_uci",
+        "learning_rate": 0.002,
+        "loss": "huber",
+        "normalized": true,
+        "parameters": 15841,
+        "residual": true,
+        "seconds": 5.657000000006519,
+        "seed": 7,
+        "selected_epoch": 9,
+        "selected_validation": {
+          "mae_pawns": 2.218412,
+          "rmse_pawns": 2.924215
+        },
+        "status": "predictive evaluation only; no strength claim",
+        "train_count": 2520,
+        "val_count": 316,
+        "width": 32
+      }
+    ]
+  },
+  "torch": "2.14.1+cpu"
+}

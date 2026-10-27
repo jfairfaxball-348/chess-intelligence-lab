@@ -105,3 +105,10 @@ and 1.730 material; playing strength is unmeasured. See the
 [S003 local handoff](docs/S003-handoff.md) for artifacts and reuse commands.
 Annotation now resumes incrementally with input/configuration checks. Training
 saves the best validation epoch and refuses existing checkpoint paths.
+
+S003 compared normalization, material residuals and losses in eight bounded local
+trials. Its selected model scored 2.140 pawns MAE on 20 fresh games, versus 3.458
+for S002 and 1.883 for material. Material remains better; strength is unmeasured.
+See the [S003 report](docs/experiments/S003-report.md) and
+[S004 handoff](docs/S004-handoff.md). Checkpoints now carry representation and
+residual configuration; the original S002 format remains supported.

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "failure": "Initial trial report serialization failed because loss configuration was shadowed by batch tensor",
+  "preserved_checkpoint": "checkpoints/s003/model-v001-unrecorded.pt",
+  "preserved_log": "runs/s003/initial-failure.log",
+  "rerun_trial_1_weights_identical": true
+}
