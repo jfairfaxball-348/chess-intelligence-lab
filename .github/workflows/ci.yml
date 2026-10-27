@@ -1,0 +1,37 @@
+name: S001 tests and synthetic training smoke
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package and test tools
+        run: python -m pip install -e '.[dev]'
+      - name: Install CPU-only PyTorch for neural smoke
+        run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Run tests
+        run: python -m pytest -q
+      - name: Run reproducible synthetic training smoke
+        run: python -m chesslab.cli smoke --out runs/ci-s001 --train-count 32 --val-count 12 --epochs 2 --seed 7
+      - name: Run UCI handshake
+        shell: bash
+        run: |
+          printf 'uci\nisready\nposition startpos\ngo depth 1\nquit\n' | python -m chesslab.uci | tee /tmp/uci-output.txt
+          grep -q '^uciok$' /tmp/uci-output.txt
+          grep -q '^readyok$' /tmp/uci-output.txt
+          grep -q '^bestmove ' /tmp/uci-output.txt
+      - name: Upload tiny experiment report
+        uses: actions/upload-artifact@v4
+        with:
+          name: s001-smoke-report
+          path: runs/ci-s001/report.json

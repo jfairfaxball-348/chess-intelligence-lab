@@ -1,0 +1,28 @@
+# Large / local research artifacts
+data/
+datasets/
+checkpoints/
+runs/
+logs/
+artifacts/
+models/
+*.pt
+*.pth
+*.pkl
+*.onnx
+*.jsonl
+*.pgn
+# Local tooling
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.env
+.env.*
+!.env.example
