@@ -79,8 +79,8 @@ def train(train_path: str | Path, val_path: str | Path, out_path: str | Path,
         order = torch.randperm(len(xtrain))
         for ids in order.split(32):
             optimiser.zero_grad()
-            loss = loss_fn(model(xtrain[ids]), ytrain[ids])
-            loss.backward()
+            batch_loss = loss_fn(model(xtrain[ids]), ytrain[ids])
+            batch_loss.backward()
             optimiser.step()
         model.eval()
         history.append(_metrics(model, xval, yval))

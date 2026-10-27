@@ -1,4 +1,5 @@
 import chess
+import json
 import pytest
 
 torch=pytest.importorskip('torch')
@@ -39,6 +40,7 @@ def test_configured_checkpoint_roundtrip(tmp_path,normalized,residual,loss):
     t,v,c=(tmp_path/name for name in ['train.jsonl','val.jsonl','net.pt'])
     generate_split(t,v,8,4,31)
     result=train(t,v,c,epochs=1,width=4,normalized=normalized,residual=residual,loss=loss,include_initial=True)
+    assert json.loads(json.dumps(result))["loss"] == loss
     model=load_evaluator(str(c))
     assert model.normalized==normalized and model.residual==residual
     assert evaluate(c,v)['neural']==result['selected_validation']
