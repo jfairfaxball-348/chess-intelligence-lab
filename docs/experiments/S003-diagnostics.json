@@ -1,0 +1,50 @@
+{
+  "train": {
+    "material_by_turn": {
+      "black": {
+        "mae_pawns": 1.9191700903861957,
+        "n": 1217
+      },
+      "white": {
+        "mae_pawns": 2.2913955479452053,
+        "n": 1168
+      }
+    },
+    "s002": {
+      "label_sources": [
+        "stockfish_uci"
+      ],
+      "material_baseline_mae_pawns": 2.101459,
+      "neural": {
+        "mae_pawns": 2.057825,
+        "rmse_pawns": 2.876964
+      },
+      "positions": 2385,
+      "warning": "Value loss is not playing strength; mate targets excluded"
+    }
+  },
+  "val": {
+    "material_by_turn": {
+      "black": {
+        "mae_pawns": 2.288535031847134,
+        "n": 157
+      },
+      "white": {
+        "mae_pawns": 2.1758156028368796,
+        "n": 141
+      }
+    },
+    "s002": {
+      "label_sources": [
+        "stockfish_uci"
+      ],
+      "material_baseline_mae_pawns": 2.235201,
+      "neural": {
+        "mae_pawns": 2.822334,
+        "rmse_pawns": 4.053586
+      },
+      "positions": 298,
+      "warning": "Value loss is not playing strength; mate targets excluded"
+    }
+  }
+}

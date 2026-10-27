@@ -1,0 +1,51 @@
+{
+  "base_git_sha": "956395aa955e99836984e02e1d160dd2bb395a30",
+  "batch_size": 32,
+  "decision": "Compare selected neural versus material and frozen S002 checkpoint on one fresh holdout; no further tuning afterward",
+  "epochs": 20,
+  "factors": {
+    "loss": [
+      "mse",
+      "huber"
+    ],
+    "normalized": [
+      false,
+      true
+    ],
+    "residual": [
+      false,
+      true
+    ]
+  },
+  "fresh_games": 20,
+  "fresh_generation_seed": 30361027,
+  "generation": {
+    "depth": 4,
+    "hash_mb": 32,
+    "multipv": 3,
+    "ply_cap": 240,
+    "threads": 1,
+    "weights": [
+      8,
+      2,
+      1
+    ]
+  },
+  "learning_rate": 0.002,
+  "limits": "Same CNN and parameter count; no timed match, no architecture expansion, one training seed",
+  "residual_initialization": "Zero final-layer weights and bias, exact material at epoch zero",
+  "sampling": "40 evenly stratified positions/game at ply >=8",
+  "seed": 7,
+  "selection": "Best validation MAE including epoch zero; between-trial validation MAE, stable trial order for ties",
+  "session": "S003",
+  "source": "locally generated games, no third-party game corpus; Stockfish GPLv3",
+  "teacher": {
+    "depth": 8,
+    "engine_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "hash_mb": 32,
+    "threads": 1
+  },
+  "train_sha256": "6f309e849bdb3785fd91220eaf255655f5fd5f3e170943607e4ff02bf3bf9366",
+  "val_sha256": "30b5d7e2180add5c5f56f42ee7ef3216218577d85701f89950791635df56e399",
+  "width": 32
+}

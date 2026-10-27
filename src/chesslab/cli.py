@@ -26,6 +26,10 @@ def main(argv: list[str] | None = None) -> None:
     train.add_argument("--checkpoint", required=True)
     train.add_argument("--epochs", type=int, default=3)
     train.add_argument("--seed", type=int, default=7)
+    train.add_argument("--normalize-stm", action="store_true")
+    train.add_argument("--material-residual", action="store_true")
+    train.add_argument("--loss", choices=("mse", "huber"), default="mse")
+    train.add_argument("--include-initial", action="store_true")
     evaluate = sub.add_parser("evaluate", help="Compare independent model against material labels")
     evaluate.add_argument("--checkpoint", required=True)
     evaluate.add_argument("--dataset", required=True)
@@ -52,7 +56,9 @@ def main(argv: list[str] | None = None) -> None:
         _print(report)
     elif args.command == "train":
         from .train import train as fit
-        _print(fit(args.train, args.val, args.checkpoint, epochs=args.epochs, seed=args.seed))
+        _print(fit(args.train, args.val, args.checkpoint, epochs=args.epochs, seed=args.seed,
+                   normalized=args.normalize_stm, residual=args.material_residual,
+                   loss=args.loss, include_initial=args.include_initial))
     elif args.command == "evaluate":
         from .train import evaluate as eval_model
         _print(eval_model(args.checkpoint, args.dataset))
